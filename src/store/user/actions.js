@@ -1,4 +1,5 @@
 /* global axios, route */
+// Promise function
 
 const actions = {
     async SOME_TEMP_FUNCTION ({ commit }) {

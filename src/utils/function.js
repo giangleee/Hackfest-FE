@@ -1,4 +1,4 @@
-import cloneDeep from 'lodash'
+import cloneDeep from 'lodash/cloneDeep'
 
 export function deepFreeze (obj) {
     Object.keys(obj).forEach((props) => {
@@ -8,6 +8,7 @@ export function deepFreeze (obj) {
                 obj[props] = deepFreeze(obj[props])
             }
     })
+    return Object.freeze(obj)
 }
 
 export function deepMelt (obj) {
