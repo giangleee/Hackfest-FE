@@ -2,7 +2,13 @@
   <section class="section">
     <div class="row justify-content-center">
       <div class="col-lg-6">
-        <vue-flashcard front="広告" back="こうこく">
+        <vue-flashcard front="広告" back="こうこく"
+        headerFront=""
+        footerFront=""
+        headerBack="QUẢNG CÁO"
+        footerBack="Quảng cáo"
+        colorBack="white"
+        colorTextBack="black">
         </vue-flashcard>
       </div>
     </div>
@@ -14,7 +20,7 @@ import vueFlashcard from "vue-flashcard";
 
 export default {
   props: ["title", "breadcrumbList", "className"],
-  
+
   components: { vueFlashcard },
   created() {
     this.$emit("childinit", this.title, this.breadcrumbList, this.className);
