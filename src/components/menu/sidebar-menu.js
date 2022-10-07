@@ -32,21 +32,11 @@ export default [
         dataBsTarget: "question-component-nav",
         url: "",
         children: [
-          // {
-          //   id: 'alert.index',
-          //   url: '',
-          //   name: 'Alerts',
-          // },
-          // {
-          //   id: 'accordion.index',
-          //   url: '',
-          //   name: 'Accordion',
-          // },
-          // {
-          //   id: 'badges.index',
-          //   url: '',
-          //   name: 'Badges',
-          // },
+          {
+            id: 'alert.index',
+            url: '/question',
+            name: 'Câu hỏi trắc nghiệm',
+          },
         ],
       },
     ],
