@@ -38,6 +38,52 @@ const routes = [
       breadcrumbList: [],
       className: "pageTitle"
     }
+  },
+  {
+    path: '/learn-kanji',
+    name: 'learn-kanji',
+    component: () => import('../views/LearnKanjiView.vue'),
+    props: {
+      title: 'Learn Kanji',
+      breadcrumbList: [
+        {
+          title: 'Kanji',
+          path: '/'
+        },
+        {
+          title: 'Học kanji',
+          path: '/learn-kanji'
+        },
+        {
+          title: 'Flashcard',
+          path: '/learn-kanji/flashcard'
+        }
+      ],
+      className: 'pagetitle'
+    },
+  },
+  {
+    path: '/learn-kanji/flashcard',
+    name: 'flashcard',
+    component: () => import('../views/FlashCardView.vue'),
+    props: {
+      title: 'Flashcard',
+      breadcrumbList: [
+        {
+          title: 'Kanji',
+          path: '/'
+        },
+        {
+          title: 'Học kanji',
+          path: '/learn-kanji'
+        },
+        {
+          title: 'Flashcard',
+          path: '/learn-kanji/flashcard'
+        }
+      ],
+      className: 'pagetitle'
+    },
   }
 
 ]

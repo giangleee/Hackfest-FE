@@ -2,13 +2,14 @@
   <div id="app">
     <HeaderComponent />
     <SidebarComponent />
-    <HeaderChildComponent
+    <main id="main" class="main">
+      <HeaderChildComponent
       :title="title"
       :breadcrumbList="breadcrumbList"
       :className="className"
     />
-    <SidebarComponent />
-    <router-view v-on:childinit="onChildInit" />  
+    <router-view v-on:childinit="onChildInit" />
+    </main>
     <FooterComponent />
   </div>
 </template>
