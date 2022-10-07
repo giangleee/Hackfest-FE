@@ -1,11 +1,13 @@
 <template>
   <div class="about">
-    <h1>This is about page</h1>
-    <h1>This is about page</h1>
-    <h1>This is about page</h1>
-    <h1>This is about page</h1>
-    <h1>This is about page</h1>
   </div>
 </template>
 
-
+<script>
+export default {
+  props: ["title", "breadcrumbList", "className"],
+  created() {
+    this.$emit("childinit", this.title, this.breadcrumbList, this.className);
+  },
+};
+</script>
