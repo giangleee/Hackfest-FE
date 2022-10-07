@@ -169,10 +169,7 @@ export default {
 .kanji-detail__meaning-contruct {
   margin: 15px 0px;
 }
-.kanji-detail__meaning,
-.kanji-detail__explane-detail {
-  // border: 1px solid black;
-}
+
 .kanji-detail__explane {
   flex-direction: column;
   justify-content: center;
