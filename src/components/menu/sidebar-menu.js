@@ -16,7 +16,7 @@ export default [
             },
             {
               id: 'accordion.index',
-              url: '',
+              url: '/about',
               name: 'Học Kanji', //  
             },
             {

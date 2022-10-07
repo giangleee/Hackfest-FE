@@ -1,9 +1,46 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view v-on:childinit="onChildInit" />
+    <HeaderComponent />
+    <SidebarComponent />
+    <HeaderChildComponent
+      :title="title"
+      :breadcrumbList="breadcrumbList"
+      :className="className"
+    />
+    <FooterComponent />
   </div>
 </template>
 
+<script>
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import SidebarComponent from "@/components/SidebarComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
+import HeaderChildComponent from "@/components/HeaderChildComponent.vue";
+
+export default {
+  components: {
+    HeaderComponent,
+    SidebarComponent,
+    FooterComponent,
+    HeaderChildComponent,
+  },
+  data() {
+    return {
+      title: "",
+      breadcrumbList: [],
+      className: "",
+    };
+  },
+  methods: {
+    onChildInit(titleName, breadcrumbList, className) {
+      this.title = titleName;
+      this.breadcrumbList = breadcrumbList;
+      this.className = className;
+    },
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
