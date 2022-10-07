@@ -88,6 +88,16 @@ const routes = [
       className: "pagetitle",
     },
   },
+  {
+    path: "/question",
+    name: "question",
+    component: () => import("../views/ExerciseView.vue"),
+    props: {
+      title: "Câu hỏi trắc nghiệm",
+      breadcrumbList: [],
+      className: "pagetitle",
+    },
+  },
 ];
 
 const router = new VueRouter({
