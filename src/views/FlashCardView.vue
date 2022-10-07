@@ -2,7 +2,7 @@
   <section class="section">
     <div class="row justify-content-center">
       <div class="col-lg-6">
-        <vue-flashcard front="hello this is a flashcard" back="with animation">
+        <vue-flashcard front="広告" back="こうこく">
         </vue-flashcard>
       </div>
     </div>
@@ -14,6 +14,7 @@ import vueFlashcard from "vue-flashcard";
 
 export default {
   props: ["title", "breadcrumbList", "className"],
+  
   components: { vueFlashcard },
   created() {
     this.$emit("childinit", this.title, this.breadcrumbList, this.className);
