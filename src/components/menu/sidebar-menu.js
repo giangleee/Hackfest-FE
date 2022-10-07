@@ -15,8 +15,8 @@ export default [
               name: 'Giới thiệu về cách học huyền lục thư cải tiến',
             },
             {
-              id: 'accordion.index',
-              url: '/about',
+              id: 'learnKanji.index',
+              url: '/learn-kanji',
               name: 'Học Kanji', //  
             },
             {

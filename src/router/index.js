@@ -25,7 +25,35 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/TempView.vue'),
     props: {
       title: 'Pagetitle',
-      breadcrumbList: [],
+      breadcrumbList: [
+        {
+          title: 'Kanji',
+          path: '/'
+        },
+        {
+          title: 'Học kanji',
+          path: '/about'
+        }
+      ],
+      className: 'pagetitle'
+    },
+  },
+  {
+    path: '/learn-kanji',
+    name: 'learn-kanji',
+    component: () => import(/* webpackChunkName: "about" */ '../views/LearnKanjiView.vue'),
+    props: {
+      title: 'Learn Kanji',
+      breadcrumbList: [
+        {
+          title: 'Kanji',
+          path: '/'
+        },
+        {
+          title: 'Học kanji',
+          path: '/about'
+        }
+      ],
       className: 'pagetitle'
     },
   }

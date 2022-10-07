@@ -1,15 +1,15 @@
 <template>
-  <main id="main" class="main">
-    <div :class="className">
-      <h1 class="text-start mb-3">{{ title }}</h1>
-      <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
-        <el-breadcrumb-item>promotion management</el-breadcrumb-item>
-        <el-breadcrumb-item>promotion list</el-breadcrumb-item>
-        <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
-      </el-breadcrumb>
-    </div>
-  </main>
+  <div :class="className">
+    <h1 class="text-start mb-3">{{ title }}</h1>
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item
+        v-for="item in breadcrumbList"
+        :key="item.id"
+        :to="{ path: item.path }"
+        >{{ item.title }}
+      </el-breadcrumb-item>
+    </el-breadcrumb>
+  </div>
 </template>
 
 <script>
@@ -18,12 +18,12 @@ export default {
     title: String,
     breadcrumbList: Array,
     className: String,
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-    .main {
-        margin-top: 0px!important;
-    }
+.main {
+  margin-top: 0px !important;
+}
 </style>
