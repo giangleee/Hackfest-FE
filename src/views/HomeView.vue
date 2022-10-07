@@ -1,6 +1,8 @@
 <template>
   <div>
-    <main id="main" class="main">
+    <main
+      id="main"
+      class="main">
       <div class="pagetitle">
         <h1>Tabs</h1>
         <nav>
@@ -21,8 +23,13 @@
                 <h5 class="card-title">Default Tabs</h5>
 
                 <!-- Default Tabs -->
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                  <li class="nav-item" role="presentation">
+                <ul
+                  class="nav nav-tabs"
+                  id="myTab"
+                  role="tablist">
+                  <li
+                    class="nav-item"
+                    role="presentation">
                     <button
                       class="nav-link active"
                       id="home-tab"
@@ -31,12 +38,13 @@
                       type="button"
                       role="tab"
                       aria-controls="home"
-                      aria-selected="true"
-                    >
+                      aria-selected="true">
                       Home
                     </button>
                   </li>
-                  <li class="nav-item" role="presentation">
+                  <li
+                    class="nav-item"
+                    role="presentation">
                     <button
                       class="nav-link"
                       id="profile-tab"
@@ -45,12 +53,13 @@
                       type="button"
                       role="tab"
                       aria-controls="profile"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Profile
                     </button>
                   </li>
-                  <li class="nav-item" role="presentation">
+                  <li
+                    class="nav-item"
+                    role="presentation">
                     <button
                       class="nav-link"
                       id="contact-tab"
@@ -59,19 +68,19 @@
                       type="button"
                       role="tab"
                       aria-controls="contact"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Contact
                     </button>
                   </li>
                 </ul>
-                <div class="tab-content pt-2" id="myTabContent">
+                <div
+                  class="tab-content pt-2"
+                  id="myTabContent">
                   <div
                     class="tab-pane fade show active"
                     id="home"
                     role="tabpanel"
-                    aria-labelledby="home-tab"
-                  >
+                    aria-labelledby="home-tab">
                     Sunt est soluta temporibus accusantium neque nam maiores
                     cumque temporibus. Tempora libero non est unde veniam est
                     qui dolor. Ut sunt iure rerum quae quisquam autem eveniet
@@ -81,8 +90,7 @@
                     class="tab-pane fade"
                     id="profile"
                     role="tabpanel"
-                    aria-labelledby="profile-tab"
-                  >
+                    aria-labelledby="profile-tab">
                     Nesciunt totam et. Consequuntur magnam aliquid eos nulla
                     dolor iure eos quia. Accusantium distinctio omnis et atque
                     fugiat. Itaque doloremque aliquid sint quasi quia distinctio
@@ -93,8 +101,7 @@
                     class="tab-pane fade"
                     id="contact"
                     role="tabpanel"
-                    aria-labelledby="contact-tab"
-                  >
+                    aria-labelledby="contact-tab">
                     Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis
                     animi debitis cumque. Accusantium quibusdam perspiciatis qui
                     qui omnis magnam. Officiis accusamus impedit molestias
@@ -114,9 +121,10 @@
                 <ul
                   class="nav nav-tabs nav-tabs-bordered"
                   id="borderedTab"
-                  role="tablist"
-                >
-                  <li class="nav-item" role="presentation">
+                  role="tablist">
+                  <li
+                    class="nav-item"
+                    role="presentation">
                     <button
                       class="nav-link active"
                       id="home-tab"
@@ -125,12 +133,13 @@
                       type="button"
                       role="tab"
                       aria-controls="home"
-                      aria-selected="true"
-                    >
+                      aria-selected="true">
                       Home
                     </button>
                   </li>
-                  <li class="nav-item" role="presentation">
+                  <li
+                    class="nav-item"
+                    role="presentation">
                     <button
                       class="nav-link"
                       id="profile-tab"
@@ -139,12 +148,13 @@
                       type="button"
                       role="tab"
                       aria-controls="profile"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Profile
                     </button>
                   </li>
-                  <li class="nav-item" role="presentation">
+                  <li
+                    class="nav-item"
+                    role="presentation">
                     <button
                       class="nav-link"
                       id="contact-tab"
@@ -153,19 +163,19 @@
                       type="button"
                       role="tab"
                       aria-controls="contact"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Contact
                     </button>
                   </li>
                 </ul>
-                <div class="tab-content pt-2" id="borderedTabContent">
+                <div
+                  class="tab-content pt-2"
+                  id="borderedTabContent">
                   <div
                     class="tab-pane fade show active"
                     id="bordered-home"
                     role="tabpanel"
-                    aria-labelledby="home-tab"
-                  >
+                    aria-labelledby="home-tab">
                     Sunt est soluta temporibus accusantium neque nam maiores
                     cumque temporibus. Tempora libero non est unde veniam est
                     qui dolor. Ut sunt iure rerum quae quisquam autem eveniet
@@ -175,8 +185,7 @@
                     class="tab-pane fade"
                     id="bordered-profile"
                     role="tabpanel"
-                    aria-labelledby="profile-tab"
-                  >
+                    aria-labelledby="profile-tab">
                     Nesciunt totam et. Consequuntur magnam aliquid eos nulla
                     dolor iure eos quia. Accusantium distinctio omnis et atque
                     fugiat. Itaque doloremque aliquid sint quasi quia distinctio
@@ -187,8 +196,7 @@
                     class="tab-pane fade"
                     id="bordered-contact"
                     role="tabpanel"
-                    aria-labelledby="contact-tab"
-                  >
+                    aria-labelledby="contact-tab">
                     Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis
                     animi debitis cumque. Accusantium quibusdam perspiciatis qui
                     qui omnis magnam. Officiis accusamus impedit molestias
@@ -205,8 +213,13 @@
                 <h5 class="card-title">Pills Tabs</h5>
 
                 <!-- Pills Tabs -->
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                  <li class="nav-item" role="presentation">
+                <ul
+                  class="nav nav-pills mb-3"
+                  id="pills-tab"
+                  role="tablist">
+                  <li
+                    class="nav-item"
+                    role="presentation">
                     <button
                       class="nav-link active"
                       id="pills-home-tab"
@@ -215,12 +228,13 @@
                       type="button"
                       role="tab"
                       aria-controls="pills-home"
-                      aria-selected="true"
-                    >
+                      aria-selected="true">
                       Home
                     </button>
                   </li>
-                  <li class="nav-item" role="presentation">
+                  <li
+                    class="nav-item"
+                    role="presentation">
                     <button
                       class="nav-link"
                       id="pills-profile-tab"
@@ -229,12 +243,13 @@
                       type="button"
                       role="tab"
                       aria-controls="pills-profile"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Profile
                     </button>
                   </li>
-                  <li class="nav-item" role="presentation">
+                  <li
+                    class="nav-item"
+                    role="presentation">
                     <button
                       class="nav-link"
                       id="pills-contact-tab"
@@ -243,19 +258,19 @@
                       type="button"
                       role="tab"
                       aria-controls="pills-contact"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Contact
                     </button>
                   </li>
                 </ul>
-                <div class="tab-content pt-2" id="myTabContent">
+                <div
+                  class="tab-content pt-2"
+                  id="myTabContent">
                   <div
                     class="tab-pane fade show active"
                     id="pills-home"
                     role="tabpanel"
-                    aria-labelledby="home-tab"
-                  >
+                    aria-labelledby="home-tab">
                     Sunt est soluta temporibus accusantium neque nam maiores
                     cumque temporibus. Tempora libero non est unde veniam est
                     qui dolor. Ut sunt iure rerum quae quisquam autem eveniet
@@ -265,8 +280,7 @@
                     class="tab-pane fade"
                     id="pills-profile"
                     role="tabpanel"
-                    aria-labelledby="profile-tab"
-                  >
+                    aria-labelledby="profile-tab">
                     Nesciunt totam et. Consequuntur magnam aliquid eos nulla
                     dolor iure eos quia. Accusantium distinctio omnis et atque
                     fugiat. Itaque doloremque aliquid sint quasi quia distinctio
@@ -277,8 +291,7 @@
                     class="tab-pane fade"
                     id="pills-contact"
                     role="tabpanel"
-                    aria-labelledby="contact-tab"
-                  >
+                    aria-labelledby="contact-tab">
                     Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis
                     animi debitis cumque. Accusantium quibusdam perspiciatis qui
                     qui omnis magnam. Officiis accusamus impedit molestias
@@ -300,9 +313,10 @@
                 <ul
                   class="nav nav-tabs d-flex"
                   id="myTabjustified"
-                  role="tablist"
-                >
-                  <li class="nav-item flex-fill" role="presentation">
+                  role="tablist">
+                  <li
+                    class="nav-item flex-fill"
+                    role="presentation">
                     <button
                       class="nav-link w-100 active"
                       id="home-tab"
@@ -311,12 +325,13 @@
                       type="button"
                       role="tab"
                       aria-controls="home"
-                      aria-selected="true"
-                    >
+                      aria-selected="true">
                       Home
                     </button>
                   </li>
-                  <li class="nav-item flex-fill" role="presentation">
+                  <li
+                    class="nav-item flex-fill"
+                    role="presentation">
                     <button
                       class="nav-link w-100"
                       id="profile-tab"
@@ -325,12 +340,13 @@
                       type="button"
                       role="tab"
                       aria-controls="profile"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Profile
                     </button>
                   </li>
-                  <li class="nav-item flex-fill" role="presentation">
+                  <li
+                    class="nav-item flex-fill"
+                    role="presentation">
                     <button
                       class="nav-link w-100"
                       id="contact-tab"
@@ -339,19 +355,19 @@
                       type="button"
                       role="tab"
                       aria-controls="contact"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Contact
                     </button>
                   </li>
                 </ul>
-                <div class="tab-content pt-2" id="myTabjustifiedContent">
+                <div
+                  class="tab-content pt-2"
+                  id="myTabjustifiedContent">
                   <div
                     class="tab-pane fade show active"
                     id="home-justified"
                     role="tabpanel"
-                    aria-labelledby="home-tab"
-                  >
+                    aria-labelledby="home-tab">
                     Sunt est soluta temporibus accusantium neque nam maiores
                     cumque temporibus. Tempora libero non est unde veniam est
                     qui dolor. Ut sunt iure rerum quae quisquam autem eveniet
@@ -361,8 +377,7 @@
                     class="tab-pane fade"
                     id="profile-justified"
                     role="tabpanel"
-                    aria-labelledby="profile-tab"
-                  >
+                    aria-labelledby="profile-tab">
                     Nesciunt totam et. Consequuntur magnam aliquid eos nulla
                     dolor iure eos quia. Accusantium distinctio omnis et atque
                     fugiat. Itaque doloremque aliquid sint quasi quia distinctio
@@ -373,8 +388,7 @@
                     class="tab-pane fade"
                     id="contact-justified"
                     role="tabpanel"
-                    aria-labelledby="contact-tab"
-                  >
+                    aria-labelledby="contact-tab">
                     Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis
                     animi debitis cumque. Accusantium quibusdam perspiciatis qui
                     qui omnis magnam. Officiis accusamus impedit molestias
@@ -394,9 +408,10 @@
                 <ul
                   class="nav nav-tabs nav-tabs-bordered d-flex"
                   id="borderedTabJustified"
-                  role="tablist"
-                >
-                  <li class="nav-item flex-fill" role="presentation">
+                  role="tablist">
+                  <li
+                    class="nav-item flex-fill"
+                    role="presentation">
                     <button
                       class="nav-link w-100 active"
                       id="home-tab"
@@ -405,12 +420,13 @@
                       type="button"
                       role="tab"
                       aria-controls="home"
-                      aria-selected="true"
-                    >
+                      aria-selected="true">
                       Home
                     </button>
                   </li>
-                  <li class="nav-item flex-fill" role="presentation">
+                  <li
+                    class="nav-item flex-fill"
+                    role="presentation">
                     <button
                       class="nav-link w-100"
                       id="profile-tab"
@@ -419,12 +435,13 @@
                       type="button"
                       role="tab"
                       aria-controls="profile"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Profile
                     </button>
                   </li>
-                  <li class="nav-item flex-fill" role="presentation">
+                  <li
+                    class="nav-item flex-fill"
+                    role="presentation">
                     <button
                       class="nav-link w-100"
                       id="contact-tab"
@@ -433,19 +450,19 @@
                       type="button"
                       role="tab"
                       aria-controls="contact"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Contact
                     </button>
                   </li>
                 </ul>
-                <div class="tab-content pt-2" id="borderedTabJustifiedContent">
+                <div
+                  class="tab-content pt-2"
+                  id="borderedTabJustifiedContent">
                   <div
                     class="tab-pane fade show active"
                     id="bordered-justified-home"
                     role="tabpanel"
-                    aria-labelledby="home-tab"
-                  >
+                    aria-labelledby="home-tab">
                     Sunt est soluta temporibus accusantium neque nam maiores
                     cumque temporibus. Tempora libero non est unde veniam est
                     qui dolor. Ut sunt iure rerum quae quisquam autem eveniet
@@ -455,8 +472,7 @@
                     class="tab-pane fade"
                     id="bordered-justified-profile"
                     role="tabpanel"
-                    aria-labelledby="profile-tab"
-                  >
+                    aria-labelledby="profile-tab">
                     Nesciunt totam et. Consequuntur magnam aliquid eos nulla
                     dolor iure eos quia. Accusantium distinctio omnis et atque
                     fugiat. Itaque doloremque aliquid sint quasi quia distinctio
@@ -467,8 +483,7 @@
                     class="tab-pane fade"
                     id="bordered-justified-contact"
                     role="tabpanel"
-                    aria-labelledby="contact-tab"
-                  >
+                    aria-labelledby="contact-tab">
                     Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis
                     animi debitis cumque. Accusantium quibusdam perspiciatis qui
                     qui omnis magnam. Officiis accusamus impedit molestias
@@ -490,8 +505,7 @@
                     class="nav flex-column nav-pills me-3"
                     id="v-pills-tab"
                     role="tablist"
-                    aria-orientation="vertical"
-                  >
+                    aria-orientation="vertical">
                     <button
                       class="nav-link active"
                       id="v-pills-home-tab"
@@ -500,8 +514,7 @@
                       type="button"
                       role="tab"
                       aria-controls="v-pills-home"
-                      aria-selected="true"
-                    >
+                      aria-selected="true">
                       Home
                     </button>
                     <button
@@ -512,8 +525,7 @@
                       type="button"
                       role="tab"
                       aria-controls="v-pills-profile"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Profile
                     </button>
                     <button
@@ -524,18 +536,18 @@
                       type="button"
                       role="tab"
                       aria-controls="v-pills-messages"
-                      aria-selected="false"
-                    >
+                      aria-selected="false">
                       Messages
                     </button>
                   </div>
-                  <div class="tab-content" id="v-pills-tabContent">
+                  <div
+                    class="tab-content"
+                    id="v-pills-tabContent">
                     <div
                       class="tab-pane fade show active"
                       id="v-pills-home"
                       role="tabpanel"
-                      aria-labelledby="v-pills-home-tab"
-                    >
+                      aria-labelledby="v-pills-home-tab">
                       Sunt est soluta temporibus accusantium neque nam maiores
                       cumque temporibus. Tempora libero non est unde veniam est
                       qui dolor. Ut sunt iure rerum quae quisquam autem eveniet
@@ -545,8 +557,7 @@
                       class="tab-pane fade"
                       id="v-pills-profile"
                       role="tabpanel"
-                      aria-labelledby="v-pills-profile-tab"
-                    >
+                      aria-labelledby="v-pills-profile-tab">
                       Nesciunt totam et. Consequuntur magnam aliquid eos nulla
                       dolor iure eos quia. Accusantium distinctio omnis et atque
                       fugiat. Itaque doloremque aliquid sint quasi quia
@@ -557,8 +568,7 @@
                       class="tab-pane fade"
                       id="v-pills-messages"
                       role="tabpanel"
-                      aria-labelledby="v-pills-messages-tab"
-                    >
+                      aria-labelledby="v-pills-messages-tab">
                       Saepe animi et soluta ad odit soluta sunt. Nihil quos
                       omnis animi debitis cumque. Accusantium quibusdam
                       perspiciatis qui qui omnis magnam. Officiis accusamus
@@ -579,24 +589,24 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import HeaderComponent from '@/components/HeaderComponent.vue'
-// import SidebarComponent from '@/components/SidebarComponent.vue'
+  // @ is an alias to /src
+  // import HeaderComponent from '@/components/HeaderComponent.vue'
+  // import SidebarComponent from '@/components/SidebarComponent.vue'
 
-export default {
-  name: "HomeView",
-  components: {
-    // HeaderComponent,
-    // SidebarComponent,
-  },
-};
+  export default {
+    name: 'HomeView',
+    components: {
+      // HeaderComponent,
+      // SidebarComponent,
+    },
+  };
 </script>
 
 <style lang="scss" scoped>
-.home {
-  font-size: 14px;
-  img {
-    width: 100px;
+  .home {
+    font-size: 14px;
+    img {
+      width: 100px;
+    }
   }
-}
 </style>

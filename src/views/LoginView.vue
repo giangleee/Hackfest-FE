@@ -1,19 +1,18 @@
 <template>
   <div class="container">
     <section
-      class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4"
-    >
+      class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
       <div class="container">
         <div class="row justify-content-center">
           <div
-            class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center"
-          >
+            class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
             <div class="d-flex justify-content-center py-4">
               <a
                 href="index.html"
-                class="logo d-flex align-items-center w-auto"
-              >
-                <img src="assets/img/logo.png" alt="" />
+                class="logo d-flex align-items-center w-auto">
+                <img
+                  src="assets/img/logo.png"
+                  alt="" />
                 <span class="d-none d-lg-block">Tên app</span>
               </a>
             </div>
@@ -32,11 +31,15 @@
 
                 <form class="row g-3 needs-validation">
                   <div class="col-12 text-start">
-                    <label for="yourUsername" class="form-label">
+                    <label
+                      for="yourUsername"
+                      class="form-label">
                       Username
                     </label>
                     <div class="input-group has-validation">
-                      <span class="input-group-text" id="inputGroupPrepend"
+                      <span
+                        class="input-group-text"
+                        id="inputGroupPrepend"
                         >@</span
                       >
                       <input
@@ -44,13 +47,14 @@
                         name="username"
                         class="form-control"
                         id="yourUsername"
-                        required
-                      />
+                        required />
                     </div>
                   </div>
 
                   <div class="col-12 text-start">
-                    <label for="yourPassword" class="form-label">
+                    <label
+                      for="yourPassword"
+                      class="form-label">
                       Password
                     </label>
                     <input
@@ -58,8 +62,7 @@
                       name="password"
                       class="form-control"
                       id="yourPassword"
-                      required
-                    />
+                      required />
                   </div>
 
                   <div class="col-12">
@@ -69,15 +72,18 @@
                         type="checkbox"
                         name="remember"
                         value="true"
-                        id="rememberMe"
-                      />
-                      <label class="form-check-label" for="rememberMe">
+                        id="rememberMe" />
+                      <label
+                        class="form-check-label"
+                        for="rememberMe">
                         Remember me
                       </label>
                     </div>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-primary w-100" type="submit">
+                    <button
+                      class="btn btn-primary w-100"
+                      type="submit">
                       Login
                     </button>
                   </div>
@@ -88,8 +94,7 @@
                     data-button-type="continue_with"
                     data-layout="default"
                     data-auto-logout-link="false"
-                    data-use-continue-as="true"
-                  ></div>
+                    data-use-continue-as="true"></div>
                   <div class="col-12">
                     <p class="small mb-0">
                       Don't have account?
@@ -107,10 +112,10 @@
 </template>
 
 <script>
-export default {
-  props: ["title", "breadcrumbList", "className"],
-  created() {
-    this.$emit("childinit", this.title, this.breadcrumbList, this.className);
-  },
-};
+  export default {
+    props: ['title', 'breadcrumbList', 'className'],
+    created() {
+      this.$emit('childinit', this.title, this.breadcrumbList, this.className);
+    },
+  };
 </script>

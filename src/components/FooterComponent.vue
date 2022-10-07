@@ -1,6 +1,8 @@
 <template>
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+  <footer
+    id="footer"
+    class="footer">
     <div class="copyright">
       &copy; Copyright <strong><span>CHEESE CAKE</span></strong
       >. All Rights Reserved
