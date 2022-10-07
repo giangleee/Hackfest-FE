@@ -10,34 +10,38 @@
         </el-card>
       </div>
       <div class="col-lg-6">
-          <div class="kanji row card">
-            <div class="col-12">
-              <div class="row">
-                <div class="col-lg-4 kanji-detail__word">
-                  <div class="kanji-word">話し</div>
-                  <div class="kanji-detail__meaning">
-                    <div class="kanji-hantu">Thoại</div>
-                    <div class="kanji-meaning">Phổi</div>
-                  </div>
-                </div>
-                <div class="col-lg-4 kanji-detail__word-contruct">
-                  <div class="kanji-word__contruct">話し</div>
-                  <div
-                    class="kanji-detail__meaning-contruct row">
-                    <div class="kanji-word__contruct-on col-lg-12">Thoại</div>
-                    <div class="kanji-word__contruct-kun col-lg-12">Phổi</div>
-                  </div>
-                </div>
-                <div class="col-4 kanji-detail__explane">
-                    <div class="kanji-detail__explane-detail">
-                        chỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji trên là lquan đến cây, cỏ, hoa
-                    </div>
+        <div class="kanji row card">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-lg-4 kanji-detail__word">
+                <div class="kanji-word">話し</div>
+                <div class="kanji-detail__meaning">
+                  <div class="kanji-hantu">Thoại</div>
+                  <div class="kanji-meaning">Phổi</div>
                 </div>
               </div>
-              <div class="kanji-example">chỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji trên là lquan đến cây, cỏ, hoachỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji trên là lquan đến cây, cỏ, hoa</div>
+              <div class="col-lg-4 kanji-detail__word-contruct">
+                <div class="kanji-word__contruct">話し</div>
+                <div class="kanji-detail__meaning-contruct row">
+                  <div class="kanji-word__contruct-on col-lg-12">Thoại</div>
+                  <div class="kanji-word__contruct-kun col-lg-12">Phổi</div>
+                </div>
+              </div>
+              <div class="col-4 kanji-detail__explane">
+                <div class="kanji-detail__explane-detail">
+                  chỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji
+                  trên là lquan đến cây, cỏ, hoa
+                </div>
+              </div>
+            </div>
+            <div class="kanji-example">
+              chỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji trên
+              là lquan đến cây, cỏ, hoachỉ ý và chỉ âm: (花)chữ thảo là chỉ ý:
+              chỉ ý của chữ kanji trên là lquan đến cây, cỏ, hoa
             </div>
           </div>
-          <!-- <div class="card">
+        </div>
+        <!-- <div class="card">
             <table>
               <tr>
                 <td rowspan="2">話し</td>
@@ -58,34 +62,38 @@
               </tr>
             </table>
           </div> -->
-          <div class="kanji row card">
-            <div class="col-12">
-              <div class="row">
-                <div class="col-lg-4 kanji-detail__word">
-                  <div class="kanji-word">話し</div>
-                  <div class="kanji-detail__meaning">
-                    <div class="kanji-hantu">Thoại</div>
-                    <div class="kanji-meaning">Phổi</div>
-                  </div>
-                </div>
-                <div class="col-lg-4 kanji-detail__word-contruct">
-                  <div class="kanji-word__contruct">話し</div>
-                  <div
-                    class="kanji-detail__meaning-contruct row">
-                    <div class="kanji-word__contruct-on col-lg-12">Thoại</div>
-                    <div class="kanji-word__contruct-kun col-lg-12">Phổi</div>
-                  </div>
-                </div>
-                <div class="col-4 kanji-detail__explane">
-                    <div class="kanji-detail__explane-detail">
-                        chỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji trên là lquan đến cây, cỏ, hoa
-                    </div>
+        <div class="kanji row card">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-lg-4 kanji-detail__word">
+                <div class="kanji-word">話し</div>
+                <div class="kanji-detail__meaning">
+                  <div class="kanji-hantu">Thoại</div>
+                  <div class="kanji-meaning">Phổi</div>
                 </div>
               </div>
-              <div class="kanji-example">chỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji trên là lquan đến cây, cỏ, hoachỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji trên là lquan đến cây, cỏ, hoa</div>
+              <div class="col-lg-4 kanji-detail__word-contruct">
+                <div class="kanji-word__contruct">話し</div>
+                <div class="kanji-detail__meaning-contruct row">
+                  <div class="kanji-word__contruct-on col-lg-12">Thoại</div>
+                  <div class="kanji-word__contruct-kun col-lg-12">Phổi</div>
+                </div>
+              </div>
+              <div class="col-4 kanji-detail__explane">
+                <div class="kanji-detail__explane-detail">
+                  chỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji
+                  trên là lquan đến cây, cỏ, hoa
+                </div>
+              </div>
+            </div>
+            <div class="kanji-example">
+              chỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji trên
+              là lquan đến cây, cỏ, hoachỉ ý và chỉ âm: (花)chữ thảo là chỉ ý:
+              chỉ ý của chữ kanji trên là lquan đến cây, cỏ, hoa
             </div>
           </div>
-          <!-- <div class="card">
+        </div>
+        <!-- <div class="card">
             <table>
               <tr>
                 <td rowspan="2">話し</td>
@@ -109,7 +117,7 @@
       </div>
       <div class="col-lg-2">
         <el-card class="box-card">
-            <el-button type="primary">Học</el-button>
+          <el-button type="primary">Học</el-button>
         </el-card>
       </div>
     </div>
@@ -185,8 +193,10 @@ export default {
 }
 
 .card {
-    table, tr, td {
-        border: 1px solid black;
-    }
+  table,
+  tr,
+  td {
+    border: 1px solid black;
+  }
 }
 </style>

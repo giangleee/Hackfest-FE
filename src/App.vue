@@ -4,11 +4,11 @@
     <SidebarComponent />
     <main id="main" class="main">
       <HeaderChildComponent
-      :title="title"
-      :breadcrumbList="breadcrumbList"
-      :className="className"
-    />
-    <router-view v-on:childinit="onChildInit" />
+        :title="title"
+        :breadcrumbList="breadcrumbList"
+        :className="className"
+      />
+      <router-view v-on:childinit="onChildInit" />
     </main>
     <FooterComponent />
   </div>
