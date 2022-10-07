@@ -22,21 +22,22 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import('../views/TempView.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
     props: {
-      title: 'Pagetitle',
-      breadcrumbList: [
-        {
-          title: 'Kanji',
-          path: '/'
-        },
-        {
-          title: 'Học kanji',
-          path: '/about'
-        }
-      ],
-      className: 'pagetitle'
-    },
+      title: "About page",
+      breadcrumbList: [],
+      className: "pageTitle"
+    }
+  },
+  {
+    path: '/introduction',
+    name: 'introduction',
+    component: () => import(/* webpackChunkName: "about" */ '../views/IntroductionView.vue'),
+    props: {
+      title: "Phương pháp học Kanji bằng LỤC THƯ",
+      breadcrumbList: [],
+      className: "pageTitle"
+    }
   },
   {
     path: '/learn-kanji',
@@ -84,6 +85,7 @@ const routes = [
       className: 'pagetitle'
     },
   }
+
 ]
 
 const router = new VueRouter({

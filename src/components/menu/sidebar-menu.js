@@ -11,7 +11,7 @@ export default [
           children: [
             {
               id: 'introduction.index',
-              url: '',
+              url: '/introduction',
               name: 'Giới thiệu về cách học huyền lục thư cải tiến',
             },
             {
