@@ -39,6 +39,24 @@ export default [
           },
         ],
       },
+      {
+        id: "troChuyen",
+        name: "Trò Chuyện Ngẫu Nhiên",
+        dataBsTarget: "trochuyen-component-nav",
+        url: "",
+        children: [
+          {
+            id: 'chat.index',
+            url: '/chat',
+            name: 'Chat',
+          },
+          {
+            id: 'videocall.index',
+            url: '/videocall',
+            name: 'Video Call',
+          }
+        ],
+      },
     ],
   },
 ];

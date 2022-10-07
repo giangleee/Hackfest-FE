@@ -1,19 +1,19 @@
 <template>
   <div class="container">
     <section
-      class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4"
+        class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4"
     >
       <div class="container">
         <div class="row justify-content-center">
           <div
-            class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center"
+              class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center"
           >
             <div class="d-flex justify-content-center py-4">
               <a
-                href="index.html"
-                class="logo d-flex align-items-center w-auto"
+                  href="index.html"
+                  class="logo d-flex align-items-center w-auto"
               >
-                <img src="assets/img/logo.png" alt="" />
+                <img src="assets/img/logo.png" alt=""/>
                 <span class="d-none d-lg-block">Tên app</span>
               </a>
             </div>
@@ -37,14 +37,14 @@
                     </label>
                     <div class="input-group has-validation">
                       <span class="input-group-text" id="inputGroupPrepend"
-                        >@</span
+                      >@</span
                       >
                       <input
-                        type="text"
-                        name="username"
-                        class="form-control"
-                        id="yourUsername"
-                        required
+                          type="text"
+                          name="username"
+                          class="form-control"
+                          id="yourUsername"
+                          required
                       />
                     </div>
                   </div>
@@ -54,22 +54,22 @@
                       Password
                     </label>
                     <input
-                      type="password"
-                      name="password"
-                      class="form-control"
-                      id="yourPassword"
-                      required
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        id="yourPassword"
+                        required
                     />
                   </div>
 
                   <div class="col-12">
                     <div class="form-check">
                       <input
-                        class="form-check-input"
-                        type="checkbox"
-                        name="remember"
-                        value="true"
-                        id="rememberMe"
+                          class="form-check-input"
+                          type="checkbox"
+                          name="remember"
+                          value="true"
+                          id="rememberMe"
                       />
                       <label class="form-check-label" for="rememberMe">
                         Remember me
@@ -81,15 +81,11 @@
                       Login
                     </button>
                   </div>
-                  <div
-                    class="fb-login-button"
-                    data-width=""
-                    data-size="large"
-                    data-button-type="continue_with"
-                    data-layout="default"
-                    data-auto-logout-link="false"
-                    data-use-continue-as="true"
-                  ></div>
+                  <div class="col-12">
+                    <button class="btn btn-primary w-100" onclick="loginFB()">
+                      Login with Facebook
+                    </button>
+                  </div>
                   <div class="col-12">
                     <p class="small mb-0">
                       Don't have account?
@@ -105,7 +101,6 @@
     </section>
   </div>
 </template>
-
 <script>
 export default {
   props: ["title", "breadcrumbList", "className"],
