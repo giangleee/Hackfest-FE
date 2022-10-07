@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <router-view v-on:childinit="onChildInit" />
     <HeaderComponent />
     <SidebarComponent />
     <HeaderChildComponent
@@ -8,7 +7,8 @@
       :breadcrumbList="breadcrumbList"
       :className="className"
     />
-    
+    <SidebarComponent />
+    <router-view v-on:childinit="onChildInit" />  
     <FooterComponent />
   </div>
 </template>

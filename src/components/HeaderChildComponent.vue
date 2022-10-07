@@ -1,5 +1,5 @@
 <template>
-  <main id="main" class="main">
+  <main id="main" class="main mt-6">
     <div :class="className">
       <h1 class="text-start mb-3">{{ title }}</h1>
       <el-breadcrumb separator-class="el-icon-arrow-right">
