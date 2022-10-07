@@ -11,12 +11,12 @@ export default [
           children: [
             {
               id: 'introduction.index',
-              url: '',
+              url: '/kanji/introduction',
               name: 'Giới thiệu về cách học huyền lục thư cải tiến',
             },
             {
               id: 'accordion.index',
-              url: '',
+              url: '/about',
               name: 'Học Kanji', //  
             },
             {
