@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import LoginView from "../views/LoginView.vue";
 
 Vue.use(VueRouter);
 
@@ -14,7 +13,13 @@ const routes = [
   {
     path: "/login",
     name: "login",
-    component: LoginView,
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/LoginView.vue"),
+    props: {
+      title: "Login",
+      breadcrumbList: [],
+      className: "pageTitle",
+    },
   },
   {
     path: "/introduction",
