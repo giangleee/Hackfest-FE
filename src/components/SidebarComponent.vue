@@ -28,9 +28,10 @@
             <li
               v-for="childrenItem in sidebarMenuSub.children"
               :key="childrenItem.id" >
-              <a :href="childrenItem.url">
-                <i class="bi bi-circle"></i><span class="text-start">{{ childrenItem.name }}</span>
-              </a>
+              <router-link :to="childrenItem.url">
+                <i class="bi bi-circle"></i>
+                <span class="text-start">{{ childrenItem.name }}</span>
+              </router-link>
             </li>
           </ul>
         </div>
