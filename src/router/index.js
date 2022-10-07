@@ -1,97 +1,99 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import LoginView from '../views/LoginView.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import HomeView from "../views/HomeView.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "home",
+    component: HomeView,
   },
   {
-    path: '/login',
-    name: 'login',
-    component: LoginView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    path: "/login",
+    name: "login",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/LoginView.vue"),
     props: {
-      title: "About page",
+      title: "Login",
       breadcrumbList: [],
-      className: "pageTitle"
-    }
+      className: "pageTitle",
+    },
   },
   {
-    path: '/introduction',
-    name: 'introduction',
-    component: () => import(/* webpackChunkName: "about" */ '../views/IntroductionView.vue'),
+    path: "/introduction",
+    name: "introduction",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/IntroductionView.vue"),
     props: {
       title: "Phương pháp học Kanji bằng LỤC THƯ",
       breadcrumbList: [],
-      className: "pageTitle"
-    }
-  },
-  {
-    path: '/learn-kanji',
-    name: 'learn-kanji',
-    component: () => import('../views/LearnKanjiView.vue'),
-    props: {
-      title: 'Learn Kanji',
-      breadcrumbList: [
-        {
-          title: 'Kanji',
-          path: '/'
-        },
-        {
-          title: 'Học kanji',
-          path: '/learn-kanji'
-        },
-        {
-          title: 'Flashcard',
-          path: '/learn-kanji/flashcard'
-        }
-      ],
-      className: 'pagetitle'
+      className: "pageTitle",
     },
   },
   {
-    path: '/learn-kanji/flashcard',
-    name: 'flashcard',
-    component: () => import('../views/FlashCardView.vue'),
+    path: "/learn-kanji",
+    name: "learn-kanji",
+    component: () => import("../views/LearnKanjiView.vue"),
     props: {
-      title: 'Flashcard',
+      title: "Learn Kanji",
       breadcrumbList: [
         {
-          title: 'Kanji',
-          path: '/'
+          title: "Kanji",
+          path: "/",
         },
         {
-          title: 'Học kanji',
-          path: '/learn-kanji'
+          title: "Học kanji",
+          path: "/learn-kanji",
         },
         {
-          title: 'Flashcard',
-          path: '/learn-kanji/flashcard'
-        }
+          title: "Flashcard",
+          path: "/learn-kanji/flashcard",
+        },
       ],
-      className: 'pagetitle'
+      className: "pagetitle",
     },
-  }
-
-]
+  },
+  {
+    path: "/learn-kanji/flashcard",
+    name: "flashcard",
+    component: () => import("../views/FlashCardView.vue"),
+    props: {
+      title: "Flashcard",
+      breadcrumbList: [
+        {
+          title: "Kanji",
+          path: "/",
+        },
+        {
+          title: "Học kanji",
+          path: "/learn-kanji",
+        },
+        {
+          title: "Flashcard",
+          path: "/learn-kanji/flashcard",
+        },
+      ],
+      className: "pagetitle",
+    },
+  },
+  {
+    path: "/user",
+    name: "user",
+    component: () => import("../views/UserView.vue"),
+    props: {
+      title: "Profile",
+      breadcrumbList: [],
+      className: "pagetitle",
+    },
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

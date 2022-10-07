@@ -10,13 +10,21 @@
       </li>
       <!-- End Dashboard Nav -->
 
-      <li class="nav-item" v-for="sidebarMenuItem in sidebarMenu" :key="sidebarMenuItem.id">
-        <div v-for="sidebarMenuSub in sidebarMenuItem.sub" :key="sidebarMenuSub.id">
+      <li
+        class="nav-item"
+        v-for="sidebarMenuItem in sidebarMenu"
+        :key="sidebarMenuItem.id"
+      >
+        <div
+          v-for="sidebarMenuSub in sidebarMenuItem.sub"
+          :key="sidebarMenuSub.id"
+        >
           <a
             class="nav-link collapsed"
             :data-bs-target="`#${sidebarMenuSub.dataBsTarget}`"
             data-bs-toggle="collapse"
-            href="#" >
+            href="#"
+          >
             <i class="bi bi-menu-button-wide"></i>
             <span>{{ sidebarMenuSub.name }}</span>
             <i class="bi bi-chevron-down ms-auto"></i>
@@ -24,10 +32,12 @@
           <ul
             :id="`${sidebarMenuSub.dataBsTarget}`"
             class="nav-content collapse"
-            data-bs-parent="#sidebar-nav" >
+            data-bs-parent="#sidebar-nav"
+          >
             <li
               v-for="childrenItem in sidebarMenuSub.children"
-              :key="childrenItem.id" >
+              :key="childrenItem.id"
+            >
               <router-link :to="childrenItem.url">
                 <i class="bi bi-circle"></i>
                 <span class="text-start">{{ childrenItem.name }}</span>

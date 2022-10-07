@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <HeaderComponent />
-    <SidebarComponent />
-    <main id="main" class="main">
+    <HeaderComponent v-if="title !== 'Login'"/>
+    <SidebarComponent v-if="title !== 'Login'"/>
+    <main id="main" class="main" v-if="title !== 'Login'">
       <HeaderChildComponent
-      :title="title"
-      :breadcrumbList="breadcrumbList"
-      :className="className"
-    />
-    <router-view v-on:childinit="onChildInit" />
+        :title="title"
+        :breadcrumbList="breadcrumbList"
+        :className="className"
+      />
+      <router-view v-on:childinit="onChildInit" />
     </main>
-    <FooterComponent />
+    <main v-else>
+      <router-view v-on:childinit="onChildInit" />
+    </main>
+    <FooterComponent v-if="title !== 'Login'"/>
   </div>
 </template>
 
