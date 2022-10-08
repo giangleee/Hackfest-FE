@@ -63,7 +63,6 @@
 </style>
 <script>
 import InputTextComponent from '@/components/InputTextComponent.vue';
-import methods from "methods";
 
 export default {
   props: ["title", "breadcrumbList", "className"],
