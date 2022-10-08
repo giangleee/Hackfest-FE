@@ -191,54 +191,22 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">STT</th>
-                <th scope="col">Phương pháp</th>
-                <th scope="col">Giải thích</th>
-                <th scope="col">Ưu điểm</th>
-                <th scope="col">Nhược điểm</th>
+                <th
+                  scope="col"
+                  v-for="item in thTitle"
+                  :key="item.id">
+                  {{ item.name }}
+                </th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Học chay</td>
-                <td>Dựa vào việc luyện đọc và viết thật nhiều.</td>
-                <td>mang tính thực tiễn cao do bản chất của phương pháp này là sự luyện tập.</td>
-                <td>
-                  <li>tốn nhiều thời gian.</li>
-                  <li>khó nhớ.</li>
-                  <li>dễ nhầm lẫn.</li>
-                  <li>không hiểu bản chất Kanji.</li>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Liên tưởng hình ảnh</td>
-                <td>
-                  Liên tưởng chữ - thú vị, sinh động, Kanji với một gợi nên hứng thú hình ảnh nào
-                  đó.
-                </td>
-                <td>thú vị, kích thích tính sáng tạo và tư duy của người học.</td>
-                <td>
-                  <li>khó viết đúng nét chữ.</li>
-                  <li>
-                    khó tưởng tượng hình ảnh phù hợp cho toàn bộ Kanji do không phải chữ nào cũng là
-                    chữ tượng hình.
+              <tr v-for="item in trContent" :key="item.id">
+                <th scope="row">{{ item.id }}</th>
+                <td v-for="item2 in item.tdList" :key="item2">
+                  {{ item2.content }}
+                  <li v-for="item3 in item2.liContentArr" :key="item3">
+                    {{ item3.liContent }}
                   </li>
-                  <li>không hiểu bản chất Kanji.</li>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Nghĩ câu chuyện</td>
-                <td>Kết hợp ý nghĩa các bộ thủ tạo thành một câu chuyện.</td>
-                <td>thú vị, kích thích tính sáng tạo và tư duy của người học.</td>
-                <td>
-                  <li>
-                    khó sáng tạo ra câu chuyện phù hợp cho toàn bộ Kanji do không phải chữ nào cũng
-                    là chữ hội ý.
-                  </li>
-                  <li>không hiểu bản chất Kanji.</li>
                 </td>
               </tr>
             </tbody>
@@ -278,10 +246,26 @@
 </template>
 
 <script>
+  import IntroductionText from '@/helper/IntroductionText';
+
   export default {
     props: ['title', 'breadcrumbList', 'className'],
     created() {
       this.$emit('childinit', this.title, this.breadcrumbList, this.className);
     },
+    computed: {
+      thTitle() {
+        return IntroductionText.thTitle;
+      },
+      trContent () {
+        return IntroductionText.trContent
+      }
+    },
   };
 </script>
+
+<style lang="scss" scoped>
+  td {
+    text-align: start;
+  }
+</style>
