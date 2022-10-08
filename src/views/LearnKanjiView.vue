@@ -1,63 +1,99 @@
 <template>
   <section class="section">
-    <div class="row">
-      <div class="col-lg-3">
-        <el-card class="box-card">
-          <h1 class="text-style">Hãy chọn 1 unit học</h1>
+    <div class="row container-fluid">
+      <div class="col-lg-9">
+        <div
+          class="kanji row card"
+          v-for="o in 4"
+          :key="o">
+          <div class="col-12 kanji-box">
+            <div class="row kanji-box-detail">
+              <div class="col-lg-4 kanji-detail__word">
+                <div class="kanji-word">広</div>
+
+                <div class="kanji-detail__meaning">
+                  <div class="kanji-hantu">QUẢNG</div>
+                  <div class="kanji-meaning">Rộng</div>
+                </div>
+              </div>
+              <div class="col-lg-4 kanji-detail__word-contruct">
+                <div class="kanji-word__contruct">広い</div>
+                <div class="kanji-detail__meaning-contruct row">
+                  <div class="kanji-word__contruct-on col-lg-12">ON: コウ</div>
+                  <div class="kanji-word__contruct-kun col-lg-12">KUN: ひろい</div>
+                </div>
+              </div>
+              <div class="col-4 kanji-detail__explane">
+                <div class="kanji-detail__explane-detail">
+                  chỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji trên là lquan đến cây,
+                  cỏ, hoa
+                </div>
+              </div>
+            </div>
+
+            <div class="kanji-example text-left">
+              広大（こうだい）：rộng lớn；広告（おうこく）：quảng cáo
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 w-50">
+        <el-card class="box-car">
+          <div
+            v-for="o in 20"
+            :key="o"
+            class="text item">
+            <a
+              class="nav-link collapsed text-start"
+              :data-bs-target="`#listNo${o}`"
+              data-bs-toggle="collapse"
+              href="#">
+              <span style="margin-right: 1rem">{{ 'Unit ' + o }}</span>
+              <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul
+              :id="`listNo${o}`"
+              class="nav-content collapse"
+              data-bs-parent="#sidebar-nav"
+              style="list-style: none">
+              <li class="text-start">
+                <!-- <router-link :to="childrenItem.url"> -->
+                <span class="text-start">Học card</span>
+                <!-- </router-link> -->
+              </li>
+              <li class="text-start">
+                <!-- <router-link :to="childrenItem.url"> -->
+                <span class="text-start">Quiz luyện tập chọn</span>
+                <!-- </router-link> -->
+              </li>
+              <li class="text-start">
+                <!-- <router-link :to="childrenItem.url"> -->
+                <span class="text-start">Quiz luyện tập điền</span>
+                <!-- </router-link> -->
+              </li>
+            </ul>
+          </div>
+        </el-card>
+
+        <!-- <el-card class="box-card">
           <div
             v-for="o in 20"
             :key="o"
             class="text item">
             {{ 'Unit ' + o }}
           </div>
-        </el-card>
-      </div>
-
-      <div
-        class="kanji row card"
-        v-for="o in 2"
-        :key="o">
-        <div class="col-12 kanji-box">
-          <div class="row kanji-box-detail">
-            <div class="col-lg-4 kanji-detail__word">
-              <div class="kanji-word">広</div>
-
-              <div class="kanji-detail__meaning">
-                <div class="kanji-hantu">QUẢNG</div>
-                <div class="kanji-meaning">Rộng</div>
-              </div>
-            </div>
-            <div class="col-lg-4 kanji-detail__word-contruct">
-              <div class="kanji-word__contruct">広い</div>
-              <div class="kanji-detail__meaning-contruct row">
-                <div class="kanji-word__contruct-on col-lg-12">ON: コウ</div>
-                <div class="kanji-word__contruct-kun col-lg-12">
-                  KUN: ひろい
-                </div>
-              </div>
-            </div>
-            <div class="col-4 kanji-detail__explane">
-              <div class="kanji-detail__explane-detail">
-                chỉ ý và chỉ âm: (花)chữ thảo là chỉ ý: chỉ ý của chữ kanji trên
-                là lquan đến cây, cỏ, hoa
-              </div>
-            </div>
-          </div>
-
-          <div class="kanji-example text-left">
-            広大（こうだい）：rộng lớn；広告（おうこく）：quảng cáo
-          </div>
-        </div>
+        </el-card> -->
       </div>
     </div>
 
-    <div class="col-lg-2">
+    <!-- <div class="col-lg-2">
       <el-card class="box-card">
         <router-link to="/learn-kanji/flashcard">
           <el-button type="primary"> Học </el-button>
         </router-link>
       </el-card>
-    </div>
+    </div> -->
   </section>
 </template>
 
@@ -94,8 +130,8 @@
   .kanji-word__contruct {
     margin: 15px -15px;
     // border: 1px solid black;
-    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka,
-      'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', Meiryo,
+      'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: 3rem;
     border-bottom: 1px solid black;
   }
@@ -141,5 +177,14 @@
     td {
       border: 1px solid black;
     }
+  }
+  .kanji.card {
+    margin: 0rem 1.5rem 3rem;
+  }
+  .container-fluid {
+    margin-top: 1rem;
+  }
+  .el-card.box-car {
+    width: 75%;
   }
 </style>
