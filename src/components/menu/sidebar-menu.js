@@ -19,11 +19,6 @@ export default [
             url: "/learn-kanji",
             name: "Học Kanji", //
           },
-          {
-            id: "exercise.index",
-            url: "",
-            name: "Bài tập luyện tập từng chương",
-          },
         ],
       },
       {
@@ -36,6 +31,19 @@ export default [
             id: 'alert.index',
             url: '/question',
             name: 'Câu hỏi trắc nghiệm',
+          },
+        ],
+      },
+      {
+        id: "contact",
+        name: "Liên lạc",
+        dataBsTarget: "contact-component-nav",
+        url: "/",
+        children: [
+          {
+            id: 'alert.index',
+            url: '/teacher-contact',
+            name: 'Liên lạc với giảng viên',
           },
         ],
       },

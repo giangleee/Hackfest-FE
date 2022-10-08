@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import vueFlashcard from "vue-flashcard";
+  import vueFlashcard from 'vue-flashcard';
 
 export default {
   props: ["title", "breadcrumbList", "className"],

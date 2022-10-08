@@ -13,17 +13,17 @@
 </template>
 
 <script>
-export default {
-  props: {
-    title: String,
-    breadcrumbList: Array,
-    className: String,
-  },
-};
+  export default {
+    props: {
+      title: String,
+      breadcrumbList: Array,
+      className: String,
+    },
+  };
 </script>
 
 <style lang="scss" scoped>
-.main {
-  margin-top: 0px !important;
-}
+  .main {
+    margin-top: 0px !important;
+  }
 </style>

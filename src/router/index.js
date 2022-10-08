@@ -1,15 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomeView from "../views/HomeView.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: HomeView,
-  },
   {
     path: "/login",
     name: "login",
@@ -94,6 +88,16 @@ const routes = [
     component: () => import("../views/ExerciseView.vue"),
     props: {
       title: "Câu hỏi trắc nghiệm",
+      breadcrumbList: [],
+      className: "pagetitle",
+    },
+  },
+  {
+    path: "/teacher-contact",
+    name: "teacherContact",
+    component: () => import("../views/TeacherContactView.vue"),
+    props: {
+      title: "Liên lạc với giảng viên",
       breadcrumbList: [],
       className: "pagetitle",
     },
