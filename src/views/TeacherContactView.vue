@@ -1,10 +1,10 @@
 <template>
   <section class="section">
     <div class="row justify-content-center">
-      <div class="col-lg-6">
+      <div class="col-lg-9">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Floating labels Form</h5>
+            <h5 class="card-title">Contact Form</h5>
 
             <!-- Floating Labels Form -->
             <form class="row g-3">
