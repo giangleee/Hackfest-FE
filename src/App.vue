@@ -42,7 +42,6 @@ export default {
       this.title = titleName;
       this.breadcrumbList = breadcrumbList;
       this.className = className;
-      console.log("adsfs");
     },
   },
 };

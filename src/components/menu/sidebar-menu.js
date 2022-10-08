@@ -57,6 +57,19 @@ export default [
           }
         ],
       },
+      {
+        id: "contact",
+        name: "Liên lạc",
+        dataBsTarget: "contact-component-nav",
+        url: "/",
+        children: [
+          {
+            id: 'alert.index',
+            url: '/teacher-contact',
+            name: 'Liên lạc với giảng viên',
+          },
+        ],
+      },
     ],
   },
 ];
