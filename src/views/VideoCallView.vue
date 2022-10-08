@@ -94,6 +94,7 @@ export default {
               },
               onCallEnded: (call) => {
                 console.log("Call ended:", call);
+                globalContext.hideView();
                 var modal = document.getElementById("myModal");
 
                 var btn = document.getElementById("myBtn");
@@ -112,8 +113,7 @@ export default {
                     modal.style.display = "none";
                   }
                 };
-                globalContext.hideView();
-                
+                        
               },
             })
           );
