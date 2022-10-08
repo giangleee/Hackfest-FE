@@ -163,7 +163,7 @@ export default {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
     "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 3rem;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
 }
 .kanji-word__contruct {
   font-size: 1.5rem;
