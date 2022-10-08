@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div>
+    <div class="col-lg-6">
       <div class="button2" @click="startVideoChat">
         <span></span>
         <span></span>
@@ -10,7 +10,7 @@
       </div>
       <div id="callScreen"></div>
     </div>
-    <div id="note">
+    <div id="note card col-lg-6">
       <div id="editor">
         <p>Hello World!</p>
       </div>
@@ -22,6 +22,12 @@
 </template>
 <style lang="scss">
 @import "@/assets/styles/videoCallForm.scss";
+.home{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 </style>
 
 <script>
