@@ -19,6 +19,11 @@ export default [
             url: "/learn-kanji",
             name: "Học Kanji", //
           },
+          {
+            id: "exercise.index",
+            url: "",
+            name: "Bài tập luyện tập từng chương",
+          },
         ],
       },
       {
@@ -32,6 +37,24 @@ export default [
             url: '/question',
             name: 'Câu hỏi trắc nghiệm',
           },
+        ],
+      },
+      {
+        id: "troChuyen",
+        name: "Trò Chuyện Ngẫu Nhiên",
+        dataBsTarget: "trochuyen-component-nav",
+        url: "",
+        children: [
+          {
+            id: 'chat.index',
+            url: '/chat',
+            name: 'Chat',
+          },
+          {
+            id: 'videocall.index',
+            url: '/videocall',
+            name: 'Video Call',
+          }
         ],
       },
       {

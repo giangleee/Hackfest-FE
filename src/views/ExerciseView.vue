@@ -1,9 +1,12 @@
 <script>
   import QuestionComponent from '@/components/QuestionComponent.vue';
+  import ReviKanjiInput from '@/components/ReviKanjiInput.vue'
+
   export default {
     props: ['title', 'breadcrumbList', 'className'],
     components: {
       QuestionComponent,
+      ReviKanjiInput,
     },
     created() {
       this.$emit('childinit', this.title, this.breadcrumbList, this.className);

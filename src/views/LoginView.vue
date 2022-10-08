@@ -1,121 +1,126 @@
 <template>
   <div class="container">
-    <section
-      class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div
-            class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
-            <div class="d-flex justify-content-center py-4">
-              <a
-                href="index.html"
-                class="logo d-flex align-items-center w-auto">
-                <img
-                  src="assets/img/logo.png"
-                  alt="" />
-                <span class="d-none d-lg-block">Tên app</span>
-              </a>
-            </div>
-            <!-- End Logo -->
 
-            <div class="card mb-3">
-              <div class="card-body">
-                <div class="pt-4 pb-2">
-                  <h5 class="card-title text-center pb-0 fs-4">
-                    Login to Your Account
-                  </h5>
-                  <p class="text-center small">
-                    Enter your username & password to login
-                  </p>
-                </div>
-
-                <form class="row g-3 needs-validation">
-                  <div class="col-12 text-start">
-                    <label
-                      for="yourUsername"
-                      class="form-label">
-                      Username
-                    </label>
-                    <div class="input-group has-validation">
-                      <span
-                        class="input-group-text"
-                        id="inputGroupPrepend"
-                        >@</span
-                      >
-                      <input
-                        type="text"
-                        name="username"
-                        class="form-control"
-                        id="yourUsername"
-                        required />
-                    </div>
-                  </div>
-
-                  <div class="col-12 text-start">
-                    <label
-                      for="yourPassword"
-                      class="form-label">
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      name="password"
-                      class="form-control"
-                      id="yourPassword"
-                      required />
-                  </div>
-
-                  <div class="col-12">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        name="remember"
-                        value="true"
-                        id="rememberMe" />
-                      <label
-                        class="form-check-label"
-                        for="rememberMe">
-                        Remember me
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <button
-                      class="btn btn-primary w-100"
-                      type="submit">
-                      Login
-                    </button>
-                  </div>
-                  <div
-                    class="fb-login-button"
-                    data-width=""
-                    data-size="large"
-                    data-button-type="continue_with"
-                    data-layout="default"
-                    data-auto-logout-link="false"
-                    data-use-continue-as="true"></div>
-                  <div class="col-12">
-                    <p class="small mb-0">
-                      Don't have account?
-                      <a href="pages-register.html">Create an account</a>
-                    </p>
-                  </div>
-                </form>
-              </div>
-            </div>
+    <!-- End Logo -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800">
+    <div class="containerz" id="containerz">
+      <div class="form-container sign-up-container">
+        <form>
+          <h1>Create Account</h1>
+          <div class="social-container">
+            <ul class="wrapper">
+              <li class="icon facebook">
+                <span class="tooltip">Facebook</span>
+                <span><i class="fab fa-facebook-f"></i></span>
+              </li>
+              <li class="icon googlez">
+                <span class="tooltip">Google</span>
+                <span><i class="fab fa-google-plus-g"></i></span>
+              </li>
+            </ul>
+          </div>
+          <span>or use your email for registration</span>
+          <input type="text" placeholder="Name"/>
+          <input type="email" placeholder="Email"/>
+          <input type="password" placeholder="Password"/>
+          <button>Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form>
+          <h1>Sign in</h1>
+          <div class="social-container">
+            <ul class="wrapper">
+              <li class="icon facebook">
+                <span class="tooltip">Facebook</span>
+                <span><i class="fab fa-facebook-f"></i></span>
+              </li>
+              <li class="icon googlez">
+                <span class="tooltip">Google</span>
+                <span><i class="fab fa-google-plus-g"></i></span>
+              </li>
+            </ul>
+          </div>
+          <span>or use your account</span>
+          <InputTextComponent
+              type="loginDetail_email"
+              :isLogin="true"
+              typeInput="email"
+              placeholder="Please enter your email address"
+          />
+          <InputTextComponent
+              type="loginDetail_password"
+              :isLogin="true"
+              typeInput="password"
+              placeholder="Please enter your password"
+          />
+          <a href="#">Forgot your password?</a>
+          <button @click="submit">Sign In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>To keep connected with us please login with your personal info</p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>
-
+<style src="@/assets/styles/loginForm.css">
+</style>
 <script>
-  export default {
-    props: ['title', 'breadcrumbList', 'className'],
-    created() {
-      this.$emit('childinit', this.title, this.breadcrumbList, this.className);
-    },
-  };
+import InputTextComponent from '@/components/InputTextComponent.vue';
+
+export default {
+  props: ["title", "breadcrumbList", "className"],
+  components: {
+    InputTextComponent
+  },
+  created() {
+    this.$emit("childinit", this.title, this.breadcrumbList, this.className);
+  },
+  computed: {
+    loginDetail() {
+      return this.$store.state.auth.loginDetail;
+    }
+  },
+  mounted() {
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('containerz');
+
+    signUpButton.addEventListener('click', () => {
+      container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+      container.classList.remove("right-panel-active");
+    });
+  },
+  methods: {
+    submit() {
+      const payload = {
+        email: this.$store.state.user.loginDetail.email,
+        password: this.$store.state.user.loginDetail.password
+      }
+
+      this.$axios.post('http://localhost:8888/api/auth/login', {...payload}).then((res) => {
+        console.log(res)
+        localStorage.setItem("access_token", res.data.access_token);
+        this.$router.push({name: "/"});
+      }).catch((err) => {
+        console.log(err)
+      })
+    }
+  },
+};
 </script>

@@ -102,6 +102,16 @@ const routes = [
       className: "pagetitle",
     },
   },
+  {
+    path: "/videocall",
+    name: "videocall",
+    component: () => import("../views/VideoCallView.vue"),
+    props: {
+      title: "Trò chuyện ngẫu nhiên",
+      breadcrumbList: [],
+      className: "pagetitle",
+    },
+  }
 ];
 
 const router = new VueRouter({
