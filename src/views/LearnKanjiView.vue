@@ -9,29 +9,8 @@
           </div>
         </el-card>
       </div>
-      <div class="col-lg-6">
-        <!-- <div class="card">
-            <table>
-              <tr>
-                <td rowspan="2">話し</td>
-                <td rowspan="2">分からない時に</td>
-                <td>rokjnjnwspan="2"rokjnjnwspan="2"rokjnjnwspan="2"rokjnjnwspan="2"rokjnjnwspan="2"rokjnjnwspan="2"rokjnjnwspan="2"rokjnjnwspan="2"rokjnjnwspan="2"rokjnjnwspan="2"rokjnjnwspan="2"rokjnjnwspan="2"</td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td>Phế</td>
-                <td>分からない時に</td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td>Phoi</td>
-                <td>&nbsp;</td>
-              </tr>
-            </table>
-          </div> -->
-        <div class="kanji row card">
+      <div class="col-lg-6"
+        
           <div class="col-12 kanji-box">
             <div class="row kanji-box-detail">
               <div class="col-lg-4 kanji-detail__word">
@@ -62,7 +41,7 @@
               広大（こうだい）：rộng lớn；広告（おうこく）：quảng cáo
             </div>
           </div>
-        </div>
+    </div>
 
         <div class="kanji row card">
           <div class="col-12 kanji-box">

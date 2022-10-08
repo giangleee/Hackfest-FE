@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <HeaderComponent v-if="title !== 'Login'"/>
-    <SidebarComponent v-if="title !== 'Login'"/>
+    <HeaderComponent v-if="title !== 'Login'" />
+    <SidebarComponent v-if="title !== 'Login'" />
     <main id="main" class="main" v-if="title !== 'Login'">
       <HeaderChildComponent
         :title="title"
@@ -13,7 +13,7 @@
     <main v-else>
       <router-view v-on:childinit="onChildInit" />
     </main>
-    <FooterComponent v-if="title !== 'Login'"/>
+    <FooterComponent v-if="title !== 'Login'" />
   </div>
 </template>
 
