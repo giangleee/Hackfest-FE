@@ -1,11 +1,19 @@
 <template>
   <div class="home">
-    <div class="button2" @click="startVideoChat">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Tìm Kiếm Ngẫu Nhiên
+    <div>
+      <div class="button2" @click="startVideoChat">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Tìm Kiếm Ngẫu Nhiên
+      </div>
+      <div id="callScreen"></div>
+    </div>
+    <div id="note">
+      <div id="editor">
+        <p>Hello World!</p>
+      </div>
     </div>
     <div id="callScreen"></div>
     <RatingFormComponent 
@@ -15,6 +23,7 @@
 <style lang="scss">
 @import "@/assets/styles/videoCallForm.scss";
 </style>
+
 <script>
 import { CometChat } from "@cometchat-pro/chat";
 import RatingFormComponent from '@/components/RatingFormComponent.vue'
@@ -36,6 +45,15 @@ export default {
     };
   },
   mounted() {
+    let home = document.getElementsByClassName("home")[0];
+    home.style.display = "flex";
+    home.style.flexDirection = "row";
+    var quill = new Quill('#editor', {
+      theme: 'snow'
+    });
+    let editor = document.getElementById('note');
+    editor.style.width = "400px";
+    editor.style.height = "500px";
     this.authLoginUser();
     this.getLoggedInUser();
     let globalContext = this;
@@ -133,6 +151,9 @@ export default {
       callScreen.style.width = "1000px";
       callScreen.style.height = "500px";
       button.style.visibility = "hidden";
+      let editor = document.getElementById('note');
+      editor.style.width = "400px";
+      editor.style.height = "500px";
     },
     hideView() {
       let callScreen = document.getElementById("callScreen");
@@ -142,7 +163,7 @@ export default {
     },
     authLoginUser() {
       let authKey = process.env.VUE_APP_COMMETCHAT_API_KEY;
-      let uid = "user1";
+      let uid = "user2";
       const region = "US";
       const appSetting = new CometChat.AppSettingsBuilder()
         .subscribePresenceForAllUsers()
@@ -174,7 +195,7 @@ export default {
     joinQueue() {},
     startVideoChat() {
       if (!this.receiver_id) this.error = true;
-      var receiverID = "user2";
+      var receiverID = "user1";
       var callType = CometChat.CALL_TYPE.VIDEO;
       var receiverType = CometChat.RECEIVER_TYPE.USER;
       var call = new CometChat.Call(receiverID, callType, receiverType);
