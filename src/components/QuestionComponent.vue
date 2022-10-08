@@ -7,13 +7,15 @@
         </div>
         <div class="answer row justify-content-between">
           <div
-            class="col-lg-5"
+            class="col-lg-5 answer-list"
             v-for="o in 4"
             :key="o">
             <el-radio
               v-model="radio"
-              label="1">
-              <span>Option A</span>
+              :label="o"
+              @click="changeColor()"
+              >
+              <span class="answer-content">Option A</span>
             </el-radio>
           </div>
         </div>
@@ -22,12 +24,32 @@
         <el-button
           type="primary"
           plain
+          style="color: black;"
           >Submit</el-button
         >
       </el-row>
     </el-card>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      radio: '1',
+    }
+  },
+  methods:{
+    changeColor(){
+      const answer = document.getElementsByClassName('answer-content');
+      if (radio === '1') {
+        console.log(123);
+  
+      }
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
   span {
@@ -42,6 +64,15 @@
     padding: 10px 15px;
   }
   .question{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+  .answer-list{
+    background: #4d5fea;
+    border-radius: 10px;
+    color: white;
+    margin-top: 2rem;
+  }
+  .answer-content{
+    color: white;
   }
 </style>

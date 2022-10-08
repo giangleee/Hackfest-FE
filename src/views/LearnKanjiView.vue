@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="row container-fluid">
-      <div class="col-lg-9">
+      <div class="col-lg-8">
         <div class="kanji row card" v-for="o in 4" :key="o">
           <div class="col-12 kanji-box">
             <table class="flashcard-table">
@@ -83,8 +83,8 @@
         </div>
       </div>
 
-      <div class="col-lg-3 w-50 d-flex justify-content-around">
-        <el-card class="box-car">
+      <div class="col-lg-4 w-50 d-flex justify-content-around">
+        <el-card class="box-car list-unit">
           <div v-for="o in 20" :key="o" class="text item">
             <a
               class="nav-link collapsed text-start"
@@ -101,18 +101,21 @@
               data-bs-parent="#sidebar-nav"
               style="list-style: none"
             >
-              <li class="text-start">
+              <li class="text-start unit-option">
                 <!-- <router-link :to="childrenItem.url"> -->
+                  <i class="bi bi-circle-fill m-1" style="font-size: 0.4rem"></i>
                 <span class="text-start">Học card</span>
                 <!-- </router-link> -->
               </li>
-              <li class="text-start">
+              <li class="text-start unit-option">
                 <!-- <router-link :to="childrenItem.url"> -->
+                  <i class="bi bi-circle-fill m-1" style="font-size: 0.4rem"></i>
                 <span class="text-start">Quiz luyện tập chọn</span>
                 <!-- </router-link> -->
               </li>
-              <li class="text-start">
+              <li class="text-start unit-option">
                 <!-- <router-link :to="childrenItem.url"> -->
+                  <i class="bi bi-circle-fill m-1" style="font-size: 0.4rem"></i>
                 <span class="text-start">Quiz luyện tập điền</span>
                 <!-- </router-link> -->
               </li>
@@ -121,15 +124,25 @@
         </el-card>
       </div>
     </div>
+    <rating-form-component/>
   </section>
 </template>
 
 <script>
+import RatingFormComponent from "../components/RatingFormComponent.vue";
 export default {
+  components: {
+    RatingFormComponent,
+  },
   props: ["title", "breadcrumbList", "className"],
   created() {
     this.$emit("childinit", this.title, this.breadcrumbList, this.className);
   },
+  methods() {
+    $(':radio').change(function() {
+  console.log('New star rating: ' + this.value);
+});
+  }
 };
 </script>
 
@@ -144,7 +157,11 @@ export default {
 .text.item {
   margin-bottom: 5px;
 }
-
+.unit-option{
+  display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 .kanji-detail__word-contruct {
   display: flex;
   flex-direction: column;
@@ -207,6 +224,11 @@ export default {
   font-weight: 400;
   font-size: 22px;
   color: #061325;
+}
+.list-unit{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .text.item {
   margin-bottom: 5px;
