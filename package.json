@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@cometchat-pro/chat": "^3.0.2-beta1",
-    "axios": "1.1.1",
+    "axios": "^1.1.1",
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.8.3",
     "element-ui": "^2.15.10",
@@ -28,6 +28,7 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "mutationobserver-shim": "^0.3.3",
     "popper.js": "^1.16.0",
@@ -35,6 +36,7 @@
     "prettier": "^2.4.1",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.0",
+    "vue-cli-plugin-axios": "~0.0.4",
     "vue-cli-plugin-bootstrap": "~0.4.0",
     "vue-cli-plugin-lodash": "~0.1.4",
     "vue-template-compiler": "^2.6.14"
