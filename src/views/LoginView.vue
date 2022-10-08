@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800">
     <div class="containerz" id="containerz">
       <div class="form-container sign-up-container">
-        <form action="#">
+        <form>
           <h1>Create Account</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fab fa-facebook-f" onclick="loginFB()"></i></a>
@@ -19,7 +19,7 @@
         </form>
       </div>
       <div class="form-container sign-in-container">
-        <form action="#">
+        <form>
           <h1>Sign in</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fab fa-facebook-f" onclick="loginFB()"></i></a>
@@ -97,8 +97,10 @@ export default {
         password: this.$store.state.user.loginDetail.password
       }
       
-      this.$axios.post('https://localhost:8888/api/auth/login', {...payload}).then((res) => {
+      this.$axios.post('http://localhost:8888/api/auth/login', {...payload}).then((res) => {
         console.log(res)
+        localStorage.setItem("access_token", res.data.access_token);
+        this.$router.push({ name: "/" });
       }).catch((err) => {
         console.log(err)
       })

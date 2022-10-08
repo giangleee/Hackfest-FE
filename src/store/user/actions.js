@@ -17,7 +17,7 @@ const actions = {
     },
     async LOGIN({commit}, payload) {
         return new Promise((resolve, reject) => {
-            this.$axios.post("https://localhost:8888/api/auth/login", {...payload})
+            this.$axios.post("http://localhost:8888/api/auth/login", {...payload})
                 .then((response) => {
                     console.log(response)
                     // resolve(response);
