@@ -8,8 +8,16 @@
         <form>
           <h1>Create Account</h1>
           <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f" onclick="loginFB()"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <ul class="wrapper">
+              <li class="icon facebook">
+                <span class="tooltip">Facebook</span>
+                <span><i class="fab fa-facebook-f"></i></span>
+              </li>
+              <li class="icon googlez">
+                <span class="tooltip">Google</span>
+                <span><i class="fab fa-google-plus-g"></i></span>
+              </li>
+            </ul>
           </div>
           <span>or use your email for registration</span>
           <input type="text" placeholder="Name"/>
@@ -22,20 +30,28 @@
         <form>
           <h1>Sign in</h1>
           <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f" onclick="loginFB()"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <ul class="wrapper">
+              <li class="icon facebook">
+                <span class="tooltip">Facebook</span>
+                <span><i class="fab fa-facebook-f"></i></span>
+              </li>
+              <li class="icon googlez">
+                <span class="tooltip">Google</span>
+                <span><i class="fab fa-google-plus-g"></i></span>
+              </li>
+            </ul>
           </div>
           <span>or use your account</span>
           <InputTextComponent
-          type="loginDetail_email"
-          :isLogin ="true"
-          typeInput=  "email"
-          placeholder="Please enter your email address"
+              type="loginDetail_email"
+              :isLogin="true"
+              typeInput="email"
+              placeholder="Please enter your email address"
           />
           <InputTextComponent
               type="loginDetail_password"
-              :isLogin ="true"
-              typeInput=  "password"
+              :isLogin="true"
+              typeInput="password"
               placeholder="Please enter your password"
           />
           <a href="#">Forgot your password?</a>
@@ -73,7 +89,7 @@ export default {
     this.$emit("childinit", this.title, this.breadcrumbList, this.className);
   },
   computed: {
-    loginDetail () {
+    loginDetail() {
       return this.$store.state.auth.loginDetail;
     }
   },
@@ -91,16 +107,16 @@ export default {
     });
   },
   methods: {
-    submit () {
+    submit() {
       const payload = {
         email: this.$store.state.user.loginDetail.email,
         password: this.$store.state.user.loginDetail.password
       }
-      
+
       this.$axios.post('http://localhost:8888/api/auth/login', {...payload}).then((res) => {
         console.log(res)
         localStorage.setItem("access_token", res.data.access_token);
-        this.$router.push({ name: "/" });
+        this.$router.push({name: "/"});
       }).catch((err) => {
         console.log(err)
       })
