@@ -26,10 +26,20 @@
             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
           </div>
           <span>or use your account</span>
-          <input type="email" placeholder="Email"/>
-          <input type="password" placeholder="Password"/>
+          <InputTextComponent
+          type="loginDetail_email"
+          :isLogin ="true"
+          typeInput=  "email"
+          placeholder="Please enter your email address"
+          />
+          <InputTextComponent
+              type="loginDetail_password"
+              :isLogin ="true"
+              typeInput=  "password"
+              placeholder="Please enter your password"
+          />
           <a href="#">Forgot your password?</a>
-          <button>Sign In</button>
+          <button @click="submit">Sign In</button>
         </form>
       </div>
       <div class="overlay-container">
@@ -49,13 +59,24 @@
     </div>
   </div>
 </template>
-<style scoped src="@/assets/styles/loginForm.css">
+<style src="@/assets/styles/loginForm.css">
 </style>
 <script>
+import InputTextComponent from '@/components/InputTextComponent.vue';
+import methods from "methods";
+
 export default {
   props: ["title", "breadcrumbList", "className"],
+  components: {
+    InputTextComponent
+  },
   created() {
     this.$emit("childinit", this.title, this.breadcrumbList, this.className);
+  },
+  computed: {
+    loginDetail () {
+      return this.$store.state.auth.loginDetail;
+    }
   },
   mounted() {
     const signUpButton = document.getElementById('signUp');
@@ -69,6 +90,16 @@ export default {
     signInButton.addEventListener('click', () => {
       container.classList.remove("right-panel-active");
     });
-  }
+  },
+  methods: {
+    submit () {
+      const payload = {
+        email: this.$store.state.user.loginDetail.email,
+        password: this.$store.state.user.loginDetail.password
+      }
+      this.$store.dispatch('user/LOGIN', payload)
+      console.log(payload);
+    }
+  },
 };
 </script>

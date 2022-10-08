@@ -10,6 +10,8 @@ import router from "./router";
 
 Vue.config.productionTip = false;
 
+window.axios = require('axios');
+
 Vue.use(ElementUI, { locale });
 
 new Vue({
