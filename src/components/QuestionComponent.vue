@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="card">
     <el-card class="box-class container">
-      <div class="lít-question">
-        <div class="card question">
+      <div class="list-question">
+        <div class="question">
           <span>Question: A sample Question</span>
         </div>
         <div class="answer row justify-content-between">
           <div
-            class="col-lg-5 card"
+            class="col-lg-5"
             v-for="o in 4"
             :key="o">
             <el-radio
@@ -40,5 +40,8 @@
   span,
   .el-radio {
     padding: 10px 15px;
+  }
+  .question{
+    margin-bottom: 2rem;
   }
 </style>
