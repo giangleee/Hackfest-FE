@@ -118,7 +118,7 @@ export default {
     },
     authLoginUser() {
       let authKey = process.env.VUE_APP_COMMETCHAT_API_KEY;
-      let uid = "user2";
+      let uid = "user1";
       const region = "US";
       const appSetting = new CometChat.AppSettingsBuilder()
           .subscribePresenceForAllUsers()
@@ -155,7 +155,7 @@ export default {
     },
     startVideoChat() {
       if (!this.receiver_id) this.error = true;
-      var receiverID = "user1";
+      var receiverID = "user2";
       var callType = CometChat.CALL_TYPE.VIDEO;
       var receiverType = CometChat.RECEIVER_TYPE.USER;
       var call = new CometChat.Call(receiverID, callType, receiverType);
