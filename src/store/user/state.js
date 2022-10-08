@@ -6,5 +6,9 @@ export default deepFreeze({
     email: '',
     password: '',
     content: '',
+  },
+  loginDetail: {
+    email: '',
+    password: '',
   }
 });
