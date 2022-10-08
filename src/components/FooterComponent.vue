@@ -8,7 +8,7 @@
       >. All Rights Reserved
     </div>
     <div class="credits">
-      Designed by <a href="https://bootstrapmade.com/">CHEESE CAKE MEMBER</a>
+      Designed by <a href="https://bootstrapmade.com/">CHEESE CAKE MEMBERS</a>
     </div>
   </footer>
   <!-- End Footer -->
