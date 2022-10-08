@@ -97,8 +97,12 @@ export default {
         email: this.$store.state.user.loginDetail.email,
         password: this.$store.state.user.loginDetail.password
       }
-      this.$store.dispatch('user/LOGIN', payload)
-      console.log(payload);
+      
+      this.$axios.post('https://localhost:8888/api/auth/login', {...payload}).then((res) => {
+        console.log(res)
+      }).catch((err) => {
+        console.log(err)
+      })
     }
   },
 };

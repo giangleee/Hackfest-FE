@@ -1,5 +1,6 @@
 import "mutationobserver-shim";
 import Vue from "vue";
+import './plugins/axios'
 import "./plugins/bootstrap-vue";
 import App from "./App.vue";
 import store from "./store/store";
@@ -9,8 +10,6 @@ import "element-ui/lib/theme-chalk/index.css";
 import router from "./router";
 
 Vue.config.productionTip = false;
-
-window.axios = require('axios');
 
 Vue.use(ElementUI, { locale });
 
