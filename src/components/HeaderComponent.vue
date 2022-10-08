@@ -179,5 +179,14 @@
           : document.body.classList.remove('toggle-sidebar');
       },
     },
+    created () {
+      this.$axios.get('http://localhost:8888/api/auth/me', {
+        headers: {
+          'Set-Cookie': localStorage.getItem('token')
+        }
+      }).then((res) => {
+        console.log(res)
+      })
+    },
   };
 </script>

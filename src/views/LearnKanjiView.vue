@@ -124,17 +124,25 @@
         </el-card>
       </div>
     </div>
-    <div>
-    </div>
+    <rating-form-component/>
   </section>
 </template>
 
 <script>
+import RatingFormComponent from "../components/RatingFormComponent.vue";
 export default {
+  components: {
+    RatingFormComponent,
+  },
   props: ["title", "breadcrumbList", "className"],
   created() {
     this.$emit("childinit", this.title, this.breadcrumbList, this.className);
   },
+  methods() {
+    $(':radio').change(function() {
+  console.log('New star rating: ' + this.value);
+});
+  }
 };
 </script>
 
