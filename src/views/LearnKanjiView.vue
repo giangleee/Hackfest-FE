@@ -3,14 +3,13 @@
     <div class="row">
       <div class="col-lg-3">
         <el-card class="box-card">
-          <h1 class="text-style">Hãy chọn 1 unit học</h1>
+          <h1 class="text-style card-title">Hãy chọn 1 unit học</h1>
           <div v-for="o in 20" :key="o" class="text item">
             {{ "Unit " + o }}
           </div>
         </el-card>
       </div>
       <div class="col-lg-6">
-        
         <!-- <div class="card">
             <table>
               <tr>
@@ -47,7 +46,9 @@
                 <div class="kanji-word__contruct">広い</div>
                 <div class="kanji-detail__meaning-contruct row">
                   <div class="kanji-word__contruct-on col-lg-12">ON: コウ</div>
-                  <div class="kanji-word__contruct-kun col-lg-12">KUN: ひろい</div>
+                  <div class="kanji-word__contruct-kun col-lg-12">
+                    KUN: ひろい
+                  </div>
                 </div>
               </div>
               <div class="col-4 kanji-detail__explane">
@@ -78,7 +79,9 @@
                 <div class="kanji-word__contruct">広い</div>
                 <div class="kanji-detail__meaning-contruct row">
                   <div class="kanji-word__contruct-on col-lg-12">ON: コウ</div>
-                  <div class="kanji-word__contruct-kun col-lg-12">KUN: ひろい</div>
+                  <div class="kanji-word__contruct-kun col-lg-12">
+                    KUN: ひろい
+                  </div>
                 </div>
               </div>
               <div class="col-4 kanji-detail__explane">
@@ -190,8 +193,7 @@ export default {
   margin: 10px 0px;
 }
 
-
-.kanji-box{
+.kanji-box {
   border: 3px solid black;
   border-radius: 5px;
 }
@@ -206,5 +208,13 @@ export default {
   td {
     border: 1px solid black;
   }
+}
+
+.revision-question {
+  padding: 1rem 1rem;
+}
+
+.input-answer{
+  margin-bottom: 1rem;
 }
 </style>
