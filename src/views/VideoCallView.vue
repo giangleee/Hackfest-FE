@@ -51,6 +51,8 @@ export default {
     };
   },
   mounted() {
+    this.authLoginUser();
+    this.getLoggedInUser();
     let home = document.getElementsByClassName("home")[0];
     home.style.display = "flex";
     home.style.flexDirection = "row";
@@ -60,8 +62,6 @@ export default {
     let editor = document.getElementById('note');
     editor.style.width = "400px";
     editor.style.height = "500px";
-    this.authLoginUser();
-    this.getLoggedInUser();
     let globalContext = this;
     var listnerID = "123";
     CometChat.addCallListener(
