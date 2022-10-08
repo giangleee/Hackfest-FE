@@ -1,9 +1,12 @@
 <template>
   <div class="container">
-
     <!-- End Logo -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800">
-    <div class="containerz" id="containerz">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,800" />
+    <div
+      class="containerz"
+      id="containerz">
       <div class="form-container sign-up-container">
         <form>
           <h1>Create Account</h1>
@@ -20,14 +23,20 @@
             </ul>
           </div>
           <span>or use your email for registration</span>
-          <input type="text" placeholder="Name"/>
-          <input type="email" placeholder="Email"/>
-          <input type="password" placeholder="Password"/>
+          <input
+            type="text"
+            placeholder="Name" />
+          <input
+            type="email"
+            placeholder="Email" />
+          <input
+            type="password"
+            placeholder="Password" />
           <button>Sign Up</button>
         </form>
       </div>
       <div class="form-container sign-in-container">
-        <form>
+        <div class="form">
           <h1>Sign in</h1>
           <div class="social-container">
             <ul class="wrapper">
@@ -37,90 +46,101 @@
               </li>
               <li class="icon googlez">
                 <span class="tooltip">Google</span>
-                <span><i class="fab fa-google-plus-g"></i></span>
+                <span>
+                  <i class="fab fa-google-plus-g"></i>
+                </span>
               </li>
             </ul>
           </div>
           <span>or use your account</span>
           <InputTextComponent
-              type="loginDetail_email"
-              :isLogin="true"
-              typeInput="email"
-              placeholder="Please enter your email address"
-          />
+            type="loginDetail_email"
+            :isLogin="true"
+            typeInput="email"
+            placeholder="Please enter email" />
           <InputTextComponent
-              type="loginDetail_password"
-              :isLogin="true"
-              typeInput="password"
-              placeholder="Please enter your password"
-          />
+            type="loginDetail_password"
+            :isLogin="true"
+            typeInput="password"
+            placeholder="Please enter password" />
           <a href="#">Forgot your password?</a>
           <button @click="submit">Sign In</button>
-        </form>
+        </div>
       </div>
       <div class="overlay-container">
         <div class="overlay">
           <div class="overlay-panel overlay-left">
             <h1>Welcome Back!</h1>
             <p>To keep connected with us please login with your personal info</p>
-            <button class="ghost" id="signIn">Sign In</button>
+            <button
+              class="ghost"
+              id="signIn">
+              Sign In
+            </button>
           </div>
           <div class="overlay-panel overlay-right">
             <h1>Hello, Friend!</h1>
             <p>Enter your personal details and start journey with us</p>
-            <button class="ghost" id="signUp">Sign Up</button>
+            <button
+              class="ghost"
+              id="signUp">
+              Sign Up
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<style src="@/assets/styles/loginForm.css">
-</style>
+<style src="@/assets/styles/loginForm.css"></style>
 <script>
-import InputTextComponent from '@/components/InputTextComponent.vue';
+  import InputTextComponent from '@/components/InputTextComponent.vue';
 
-export default {
-  props: ["title", "breadcrumbList", "className"],
-  components: {
-    InputTextComponent
-  },
-  created() {
-    this.$emit("childinit", this.title, this.breadcrumbList, this.className);
-  },
-  computed: {
-    loginDetail() {
-      return this.$store.state.auth.loginDetail;
-    }
-  },
-  mounted() {
-    const signUpButton = document.getElementById('signUp');
-    const signInButton = document.getElementById('signIn');
-    const container = document.getElementById('containerz');
+  export default {
+    props: ['title', 'breadcrumbList', 'className'],
+    components: {
+      InputTextComponent,
+    },
+    created() {
+      this.$emit('childinit', this.title, this.breadcrumbList, this.className);
+    },
+    computed: {
+      loginDetail() {
+        return this.$store.state.user.loginDetail;
+      },
+    },
+    mounted() {
+      const signUpButton = document.getElementById('signUp');
+      const signInButton = document.getElementById('signIn');
+      const container = document.getElementById('containerz');
 
-    signUpButton.addEventListener('click', () => {
-      container.classList.add("right-panel-active");
-    });
+      signUpButton.addEventListener('click', () => {
+        container.classList.add('right-panel-active');
+      });
 
-    signInButton.addEventListener('click', () => {
-      container.classList.remove("right-panel-active");
-    });
-  },
-  methods: {
-    submit() {
-      const payload = {
-        email: this.$store.state.user.loginDetail.email,
-        password: this.$store.state.user.loginDetail.password
-      }
+      signInButton.addEventListener('click', () => {
+        container.classList.remove('right-panel-active');
+      });
+    },
+    methods: {
+      async submit() {
+        console.log('asdasdsad')
+        const payload = {
+          email: this.$store.state.user.loginDetail.email,
+          password: this.$store.state.user.loginDetail.password,
+        }
 
-      this.$axios.post('http://localhost:8888/api/auth/login', {...payload}).then((res) => {
-        console.log(res)
-        localStorage.setItem("access_token", res.data.access_token);
-        this.$router.push({name: "/"});
-      }).catch((err) => {
-        console.log(err)
-      })
-    }
-  },
-};
+        await this.$axios
+          .post('http://localhost:8888/api/auth/login', { ...payload })
+          .then((res) => {
+            console.log(res);
+            localStorage.setItem('token', res.data.access_token);
+            this.$router.push({name: "introduction"});
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      },
+    },
+  };
 </script>
