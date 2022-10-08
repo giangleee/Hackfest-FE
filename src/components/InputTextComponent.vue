@@ -3,6 +3,9 @@
     <div v-if="isLogin">
       <input v-model="name" :type="typeInput" :placeholder="placeholder"/>
     </div>
+    <div v-else-if="isRegister">
+      <input v-model="name" :type="typeInput" :placeholder="placeholder"/>
+    </div>
     <div class="form-floating" v-else>
       <input
           :type="typeInput"
@@ -41,6 +44,10 @@ export default {
       default: false,
     },
     isLogin: {
+      type: Boolean,
+      default: false,
+    },
+    isRegister: {
       type: Boolean,
       default: false,
     }

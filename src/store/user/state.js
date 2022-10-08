@@ -10,5 +10,10 @@ export default deepFreeze({
   loginDetail: {
     email: '',
     password: '',
+  },
+  registerDetail: {
+    email: '',
+    password: '',
+    name: ''
   }
 });
