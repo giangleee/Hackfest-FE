@@ -1,3 +1,4 @@
+import "../assets/css/loginForm.css";
 <template>
   <div class="container">
 
@@ -49,6 +50,8 @@
     </div>
   </div>
 </template>
+<style scoped src="@/assets/styles/loginForm.css">
+</style>
 <script>
 export default {
   props: ["title", "breadcrumbList", "className"],
