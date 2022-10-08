@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <div class="col-lg-3 w-50">
+      <div class="col-lg-3 w-50 d-flex justify-content-around">
         <el-card class="box-car">
           <div
             v-for="o in 20"
@@ -75,25 +75,8 @@
             </ul>
           </div>
         </el-card>
-
-        <!-- <el-card class="box-card">
-          <div
-            v-for="o in 20"
-            :key="o"
-            class="text item">
-            {{ 'Unit ' + o }}
-          </div>
-        </el-card> -->
       </div>
     </div>
-
-    <!-- <div class="col-lg-2">
-      <el-card class="box-card">
-        <router-link to="/learn-kanji/flashcard">
-          <el-button type="primary"> Học </el-button>
-        </router-link>
-      </el-card>
-    </div> -->
   </section>
 </template>
 

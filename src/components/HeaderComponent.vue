@@ -12,7 +12,9 @@
           alt="" />
         <span class="d-none d-lg-block">NiceAdmin</span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
+      <i
+        class="bi bi-list toggle-sidebar-btn"
+        @click="handleCollapse"></i>
     </div>
     <!-- End Logo -->
 
@@ -55,15 +57,10 @@
             <span class="badge bg-primary badge-number">4</span> </a
           ><!-- End Notification Icon -->
 
-          <ul
-            class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
             <li class="dropdown-header">
               You have 4 new notifications
-              <a href="#"
-                ><span class="badge rounded-pill bg-primary p-2 ms-2"
-                  >View all</span
-                ></a
-              >
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
             </li>
             <li>
               <hr class="dropdown-divider" />
@@ -137,15 +134,10 @@
             <span class="badge bg-success badge-number">3</span> </a
           ><!-- End Messages Icon -->
 
-          <ul
-            class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
             <li class="dropdown-header">
               You have 3 new messages
-              <a href="#"
-                ><span class="badge rounded-pill bg-primary p-2 ms-2"
-                  >View all</span
-                ></a
-              >
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
             </li>
             <li>
               <hr class="dropdown-divider" />
@@ -159,10 +151,7 @@
                   class="rounded-circle" />
                 <div>
                   <h4>Maria Hudson</h4>
-                  <p>
-                    Velit asperiores et ducimus soluta repudiandae labore
-                    officia est ut...
-                  </p>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
                   <p>4 hrs. ago</p>
                 </div>
               </a>
@@ -179,10 +168,7 @@
                   class="rounded-circle" />
                 <div>
                   <h4>Anna Nelson</h4>
-                  <p>
-                    Velit asperiores et ducimus soluta repudiandae labore
-                    officia est ut...
-                  </p>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
                   <p>6 hrs. ago</p>
                 </div>
               </a>
@@ -199,10 +185,7 @@
                   class="rounded-circle" />
                 <div>
                   <h4>David Muldon</h4>
-                  <p>
-                    Velit asperiores et ducimus soluta repudiandae labore
-                    officia est ut...
-                  </p>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
                   <p>8 hrs. ago</p>
                 </div>
               </a>
@@ -228,13 +211,10 @@
               src="../../public/NiceAdmin/assets/img/profile-img.jpg"
               alt="Profile"
               class="rounded-circle" />
-            <span class="d-none d-md-block dropdown-toggle ps-2"
-              >K. Anderson</span
-            > </a
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span> </a
           ><!-- End Profile Iamge Icon -->
 
-          <ul
-            class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>Kevin Anderson</h6>
               <span>Web Designer</span>
@@ -297,3 +277,21 @@
   </header>
   <!-- End Header -->
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        isToggle: false,
+      };
+    },
+    methods: {
+      handleCollapse() {
+        this.isToggle = !this.isToggle;
+        this.isToggle
+          ? document.body.classList.add('toggle-sidebar')
+          : document.body.classList.remove('toggle-sidebar');
+      },
+    },
+  };
+</script>

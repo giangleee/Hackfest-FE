@@ -19,11 +19,6 @@ export default [
             url: "/learn-kanji",
             name: "Học Kanji", //
           },
-          {
-            id: "exercise.index",
-            url: "",
-            name: "Bài tập luyện tập từng chương",
-          },
         ],
       },
       {

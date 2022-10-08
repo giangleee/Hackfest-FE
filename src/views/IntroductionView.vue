@@ -20,157 +20,28 @@
               <div
                 class="accordion accordion-flush"
                 id="accordionFlushExample">
-                <div class="accordion-item">
+
+                <div class="accordion-item" v-for="item in kanjiTypeIntro" :key="item.id">
                   <h2
                     class="accordion-header"
-                    id="flush-headingOne">
+                    :id="`flush-headingOne-no-${item.id}`">
                     <button
                       class="accordion-button collapsed"
                       type="button"
                       data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseOne"
+                      :data-bs-target="`#flush-collapseOne-no-${item.id}`"
                       aria-expanded="false"
-                      aria-controls="flush-collapseOne">
-                      Tượng hình
+                      :aria-controls="`flush-collapseOne-no-${item.id}`">
+                      {{ item.title }}
                     </button>
                   </h2>
                   <div
-                    id="flush-collapseOne"
+                    :id="`flush-collapseOne-no-${item.id}`"
                     class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingOne"
+                    :aria-labelledby="`flush-headingOne-no-${item.id}`"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                      Placeholder content for this accordion, which is intended to demonstrate the
-                      <code>.accordion-flush</code> class. This is the first item's accordion body.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2
-                    class="accordion-header"
-                    id="flush-headingTwo">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseTwo">
-                      Chỉ sự
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingTwo"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                      Placeholder content for this accordion, which is intended to demonstrate the
-                      <code>.accordion-flush</code> class. This is the second item's accordion body.
-                      Let's imagine this being filled with some actual content.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2
-                    class="accordion-header"
-                    id="flush-headingThree">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseThree"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseThree">
-                      Hội ý
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingThree"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                      Placeholder content for this accordion, which is intended to demonstrate the
-                      <code>.accordion-flush</code> class. This is the third item's accordion body.
-                      Nothing more exciting happening here in terms of content, but just filling up
-                      the space to make it look, at least at first glance, a bit more representative
-                      of how this would look in a real-world application.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2
-                    class="accordion-header"
-                    id="flush-headingFour">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseFour"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseFour">
-                      Hình thanh
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingFour"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                      Placeholder content for this accordion, which is intended to demonstrate the
-                      <code>.accordion-flush</code> class. This is the first item's accordion body.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2
-                    class="accordion-header"
-                    id="flush-headingFive">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseFive"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseFive">
-                      Chuyển chú
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingFive"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                      Placeholder content for this accordion, which is intended to demonstrate the
-                      <code>.accordion-flush</code> class. This is the first item's accordion body.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2
-                    class="accordion-header"
-                    id="flush-headingSix">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseSix"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseSix">
-                      Giả tá
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseSix"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingSix"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                      Placeholder content for this accordion, which is intended to demonstrate the
-                      <code>.accordion-flush</code> class. This is the first item's accordion body.
+                      {{ item.content }}
                     </div>
                   </div>
                 </div>
@@ -193,18 +64,18 @@
               <tr>
                 <th
                   scope="col"
-                  v-for="item in thTitle"
-                  :key="item.id">
-                  {{ item.name }}
+                  v-for="itemTh in thTitle"
+                  :key="itemTh.id">
+                  {{ itemTh.name }}
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="item in trContent" :key="item.id">
                 <th scope="row">{{ item.id }}</th>
-                <td v-for="item2 in item.tdList" :key="item2">
+                <td v-for="item2 in item.tdList" :key="item2.id">
                   {{ item2.content }}
-                  <li v-for="item3 in item2.liContentArr" :key="item3">
+                  <li v-for="item3 in item2.liContentArr" :key="item3.id">
                     {{ item3.liContent }}
                   </li>
                 </td>
@@ -259,6 +130,9 @@
       },
       trContent () {
         return IntroductionText.trContent
+      },
+      kanjiTypeIntro () {
+        return IntroductionText.kanjiType
       }
     },
   };
