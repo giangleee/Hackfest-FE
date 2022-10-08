@@ -4,6 +4,24 @@ export default [
     name: "First Page",
     sub: [
       {
+        id: "troChuyen",
+        name: "Trò Chuyện Ngẫu Nhiên",
+        dataBsTarget: "trochuyen-component-nav",
+        url: "",
+        children: [
+          {
+            id: 'chat.index',
+            url: '/chat',
+            name: 'Chat',
+          },
+          {
+            id: 'videocall.index',
+            url: '/videocall',
+            name: 'Video Call',
+          }
+        ],
+      },
+      {
         id: "kanji",
         name: "Kanji",
         dataBsTarget: "kanji-components-nav",
@@ -37,24 +55,6 @@ export default [
             url: '/question',
             name: 'Câu hỏi trắc nghiệm',
           },
-        ],
-      },
-      {
-        id: "troChuyen",
-        name: "Trò Chuyện Ngẫu Nhiên",
-        dataBsTarget: "trochuyen-component-nav",
-        url: "",
-        children: [
-          {
-            id: 'chat.index',
-            url: '/chat',
-            name: 'Chat',
-          },
-          {
-            id: 'videocall.index',
-            url: '/videocall',
-            name: 'Video Call',
-          }
         ],
       },
       {
